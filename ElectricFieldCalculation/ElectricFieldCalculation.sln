@@ -1,0 +1,49 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27428.2005
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ElectricFieldCalculation", "ElectricFieldCalculation\ElectricFieldCalculation.csproj", "{78C9FA67-D08E-4921-AF71-53499FDF379F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ElectricFieldCalculation.IO", "ElectricFieldCalculation.IO\ElectricFieldCalculation.IO.csproj", "{A002B630-6090-474B-9B88-D4C6DB048185}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ElectricFieldCalculation.Core", "ElectricFieldCalculation.Core\ElectricFieldCalculation.Core.csproj", "{E6B47A6A-9A74-4FD3-B6CA-8E2816BCB2A0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ElectricFieldCalculation.Console", "ElectricFieldCalculation.Console\ElectricFieldCalculation.Console.csproj", "{87BFB5B9-F2DE-4247-B547-3E33FCEB6528}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nordwest.Wpf.Controls", "Nordwest.Wpf.Controls\Nordwest.Wpf.Controls.csproj", "{962A2E0A-BE7B-4D0D-9725-F9416A8A09AE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{78C9FA67-D08E-4921-AF71-53499FDF379F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{78C9FA67-D08E-4921-AF71-53499FDF379F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{78C9FA67-D08E-4921-AF71-53499FDF379F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{78C9FA67-D08E-4921-AF71-53499FDF379F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A002B630-6090-474B-9B88-D4C6DB048185}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A002B630-6090-474B-9B88-D4C6DB048185}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A002B630-6090-474B-9B88-D4C6DB048185}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A002B630-6090-474B-9B88-D4C6DB048185}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E6B47A6A-9A74-4FD3-B6CA-8E2816BCB2A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E6B47A6A-9A74-4FD3-B6CA-8E2816BCB2A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E6B47A6A-9A74-4FD3-B6CA-8E2816BCB2A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E6B47A6A-9A74-4FD3-B6CA-8E2816BCB2A0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{87BFB5B9-F2DE-4247-B547-3E33FCEB6528}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{87BFB5B9-F2DE-4247-B547-3E33FCEB6528}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{87BFB5B9-F2DE-4247-B547-3E33FCEB6528}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{87BFB5B9-F2DE-4247-B547-3E33FCEB6528}.Release|Any CPU.Build.0 = Release|Any CPU
+		{962A2E0A-BE7B-4D0D-9725-F9416A8A09AE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{962A2E0A-BE7B-4D0D-9725-F9416A8A09AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{962A2E0A-BE7B-4D0D-9725-F9416A8A09AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{962A2E0A-BE7B-4D0D-9725-F9416A8A09AE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {05CA08E8-C6AA-40F2-A255-34F8AD97DD5D}
+	EndGlobalSection
+EndGlobal

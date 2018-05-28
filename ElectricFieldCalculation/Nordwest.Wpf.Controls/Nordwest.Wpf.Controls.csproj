@@ -1,0 +1,253 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{962A2E0A-BE7B-4D0D-9725-F9416A8A09AE}</ProjectGuid>
+    <OutputType>library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Nordwest.Wpf.Controls</RootNamespace>
+    <AssemblyName>Nordwest.Wpf.Controls</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisIgnoreGeneratedCode>true</CodeAnalysisIgnoreGeneratedCode>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>..\FieldSuite.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="WriteableBitmapEx.Wpf">
+      <HintPath>..\External\WriteableBitmapEx\WriteableBitmapEx.Wpf.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AnimationStateManager.cs" />
+    <Compile Include="Animation\AnimationBase.cs" />
+    <Compile Include="Animation\AnimatorState.cs" />
+    <Compile Include="Animation\BindingCondition.cs" />
+    <Compile Include="Animation\Animator.cs" />
+    <Compile Include="Animation\ColorAnimation.cs" />
+    <Compile Include="Animation\ConditionBase.cs" />
+    <Compile Include="Animation\NameCondition.cs" />
+    <Compile Include="Behaviors\DoubleInputTextBoxBahavior.cs" />
+    <Compile Include="Chart\Axis\AxisControls\AxisHelper.cs" />
+    <Compile Include="Chart\Axis\AxisControls\PolarAxisMarkProvider.cs" />
+    <Compile Include="Chart\ChartCanvas.xaml.cs">
+      <DependentUpon>ChartCanvas.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Chart\ChartInitalization.cs" />
+    <Compile Include="Chart\Elements\ColoredPointsChartElement.cs" />
+    <Compile Include="Chart\Elements\LinePointsChartElement.cs" />
+    <Compile Include="Chart\Elements\PoligonChartElement.cs" />
+    <Compile Include="Chart\Elements\TextChartElement.cs" />
+    <Compile Include="Chart\ToolTipData.cs" />
+    <Compile Include="Chart\ViewRange.cs" />
+    <Compile Include="MaterialOverlayControl.cs" />
+    <Compile Include="Material\Fonts.cs" />
+    <Compile Include="RenderVisualObjectHelper.cs" />
+    <Compile Include="Tools\DependencyPropertyNotifier.cs" />
+    <Compile Include="Chart\ChartEventArgs.cs" />
+    <Compile Include="ChartUI\HorizontalScroll.cs" />
+    <Compile Include="ChartUI\PaletteControl.cs" />
+    <Compile Include="Chart\Elements\BarChartElement.cs" />
+    <Compile Include="Chart\Elements\BasePointsChartElement.cs" />
+    <Compile Include="Chart\Elements\ColoredLinesChartElement.cs" />
+    <Compile Include="Chart\Elements\GridElement.cs" />
+    <Compile Include="Chart\Elements\PaletteChartElement.cs" />
+    <Compile Include="Chart\Tools\PositionInfoTool.cs" />
+    <Compile Include="Converters\MultiDelegateConverter.cs" />
+    <Compile Include="MaterialFlatIconToggleButton.cs" />
+    <Compile Include="MaterialTabControl.cs" />
+    <Compile Include="Material\Palette.cs" />
+    <Compile Include="ShadowStoryboardExtension.cs" />
+    <Compile Include="ColorScale.cs" />
+    <Compile Include="Converters\DateTimeDoubleConverter.cs" />
+    <Compile Include="Converters\DelegateConverter.cs" />
+    <Compile Include="Converters\TimeSpanConverter.cs" />
+    <Compile Include="DateRangeSlider.xaml.cs">
+      <DependentUpon>DateRangeSlider.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ExpandersPanel.cs" />
+    <Compile Include="Interval.cs" />
+    <Compile Include="ChartUI\IntervalControlBase.cs" />
+    <Compile Include="ChartUI\MiniMap\MiniMapContent.cs" />
+    <Compile Include="ChartUI\MiniMap\MiniMapControl.cs" />
+    <Compile Include="ChartUI\MiniMap\ResizableControlHost.cs" />
+    <Compile Include="ChartUI\MiniMap\ResizableControl.cs" />
+    <Compile Include="ChartUI\MiniMap\ResizeGrip.cs" />
+    <Compile Include="ChartUI\VerticalScroll.cs" />
+    <Compile Include="Chart\Axis\AxisControls\AxisControlBase.cs" />
+    <Compile Include="Chart\Axis\AxisControls\AxisMarkProvider.cs" />
+    <Compile Include="Chart\Axis\AxisControls\HorizontalAxisControl.cs" />
+    <Compile Include="Chart\Axis\AxisControls\VerticalAxisControl.cs" />
+    <Compile Include="Chart\Axis\ViewportAxis\LinAxis.cs" />
+    <Compile Include="Chart\Axis\ViewportAxis\LinLogAxis.cs" />
+    <Compile Include="Chart\Axis\ViewportAxis\Log10Axis.cs" />
+    <Compile Include="Chart\Axis\ViewportAxis\ViewportAxis.cs" />
+    <Compile Include="Chart\ChartControl.xaml.cs">
+      <DependentUpon>ChartControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Chart\Elements\ChartElement.cs" />
+    <Compile Include="Chart\Elements\ErrorChartElement.cs" />
+    <Compile Include="Chart\Elements\LineChartElement.cs" />
+    <Compile Include="Chart\Elements\StepLineChartElement.cs" />
+    <Compile Include="Chart\Elements\TableChartCell.cs" />
+    <Compile Include="Chart\Elements\TableChartElement.cs" />
+    <Compile Include="Chart\Elements\TableChartGroup.cs" />
+    <Compile Include="Chart\Tools\PanTool.cs" />
+    <Compile Include="Chart\Tools\Tool.cs" />
+    <Compile Include="Chart\Tools\ToolCollection.cs" />
+    <Compile Include="Chart\Tools\ZoomTool.cs" />
+    <Compile Include="Chart\Viewport.cs" />
+    <Compile Include="Marks.xaml.cs">
+      <DependentUpon>Marks.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MaterialExpander.cs" />
+    <Compile Include="Palette.cs" />
+    <Compile Include="PopupButton.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="TextRenderer.cs" />
+    <Compile Include="Tools\CohenSutherland.cs" />
+    <Compile Include="Tools\Helpers.cs" />
+    <Compile Include="Tools\MathHelper.cs" />
+    <Compile Include="Tools\ResourceUtil.cs" />
+    <Compile Include="Tools\SortedCollection.cs" />
+    <Compile Include="UpDownControl.cs" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="Chart\ChartCanvas.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Chart\ChartControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="DateRangeSlider.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Marks.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SliderResources.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Themes\Chart.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Themes\Common.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Themes\ExpandersPanel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Themes\generic.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Themes\Material.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Themes\MaterialExpander.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Themes\MaterialFlatIconToggleButton.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Themes\MaterialTabControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Themes\MaterialOverlayControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\PopupButton.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Themes\UpDownControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

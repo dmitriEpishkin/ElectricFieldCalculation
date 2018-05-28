@@ -1,0 +1,63 @@
+C:\Users\User\Documents\Visual Studio 2017\Projects\EPI-KIT\Nordwest.Wpf.Controls\bin\Debug\Nordwest.Wpf.Controls.dll
+C:\Users\User\Documents\Visual Studio 2017\Projects\EPI-KIT\Nordwest.Wpf.Controls\bin\Debug\Nordwest.Wpf.Controls.pdb
+C:\Users\User\Documents\Visual Studio 2017\Projects\EPI-KIT\Nordwest.Wpf.Controls\obj\Debug\Chart\ChartCanvas.baml
+C:\Users\User\Documents\Visual Studio 2017\Projects\EPI-KIT\Nordwest.Wpf.Controls\obj\Debug\Marks.baml
+C:\Users\User\Documents\Visual Studio 2017\Projects\EPI-KIT\Nordwest.Wpf.Controls\obj\Debug\SliderResources.baml
+C:\Users\User\Documents\Visual Studio 2017\Projects\EPI-KIT\Nordwest.Wpf.Controls\obj\Debug\Themes\Common.baml
+C:\Users\User\Documents\Visual Studio 2017\Projects\EPI-KIT\Nordwest.Wpf.Controls\obj\Debug\Themes\generic.baml
+C:\Users\User\Documents\Visual Studio 2017\Projects\EPI-KIT\Nordwest.Wpf.Controls\obj\Debug\Chart\ChartCanvas.g.cs
+C:\Users\User\Documents\Visual Studio 2017\Projects\EPI-KIT\Nordwest.Wpf.Controls\obj\Debug\Chart\ChartControl.g.cs
+C:\Users\User\Documents\Visual Studio 2017\Projects\EPI-KIT\Nordwest.Wpf.Controls\obj\Debug\DateRangeSlider.g.cs
+C:\Users\User\Documents\Visual Studio 2017\Projects\EPI-KIT\Nordwest.Wpf.Controls\obj\Debug\Marks.g.cs
+C:\Users\User\Documents\Visual Studio 2017\Projects\EPI-KIT\Nordwest.Wpf.Controls\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\User\Documents\Visual Studio 2017\Projects\EPI-KIT\Nordwest.Wpf.Controls\obj\Debug\Nordwest.Wpf.Controls_MarkupCompile.cache
+C:\Users\User\Documents\Visual Studio 2017\Projects\EPI-KIT\Nordwest.Wpf.Controls\obj\Debug\Nordwest.Wpf.Controls_MarkupCompile.lref
+C:\Users\User\Documents\Visual Studio 2017\Projects\EPI-KIT\Nordwest.Wpf.Controls\obj\Debug\Chart\ChartControl.baml
+C:\Users\User\Documents\Visual Studio 2017\Projects\EPI-KIT\Nordwest.Wpf.Controls\obj\Debug\DateRangeSlider.baml
+C:\Users\User\Documents\Visual Studio 2017\Projects\EPI-KIT\Nordwest.Wpf.Controls\obj\Debug\Themes\Chart.baml
+C:\Users\User\Documents\Visual Studio 2017\Projects\EPI-KIT\Nordwest.Wpf.Controls\obj\Debug\Themes\ExpandersPanel.baml
+C:\Users\User\Documents\Visual Studio 2017\Projects\EPI-KIT\Nordwest.Wpf.Controls\obj\Debug\Themes\Material.baml
+C:\Users\User\Documents\Visual Studio 2017\Projects\EPI-KIT\Nordwest.Wpf.Controls\obj\Debug\Themes\MaterialExpander.baml
+C:\Users\User\Documents\Visual Studio 2017\Projects\EPI-KIT\Nordwest.Wpf.Controls\obj\Debug\Themes\MaterialFlatIconToggleButton.baml
+C:\Users\User\Documents\Visual Studio 2017\Projects\EPI-KIT\Nordwest.Wpf.Controls\obj\Debug\Themes\MaterialTabControl.baml
+C:\Users\User\Documents\Visual Studio 2017\Projects\EPI-KIT\Nordwest.Wpf.Controls\obj\Debug\Themes\MaterialOverlayControl.baml
+C:\Users\User\Documents\Visual Studio 2017\Projects\EPI-KIT\Nordwest.Wpf.Controls\obj\Debug\Themes\PopupButton.baml
+C:\Users\User\Documents\Visual Studio 2017\Projects\EPI-KIT\Nordwest.Wpf.Controls\obj\Debug\Themes\UpDownControl.baml
+C:\Users\User\Documents\Visual Studio 2017\Projects\EPI-KIT\Nordwest.Wpf.Controls\obj\Debug\Nordwest.Wpf.Controls.g.resources
+C:\Users\User\Documents\Visual Studio 2017\Projects\EPI-KIT\Nordwest.Wpf.Controls\obj\Debug\Nordwest.Wpf.Controls.Properties.Resources.resources
+C:\Users\User\Documents\Visual Studio 2017\Projects\EPI-KIT\Nordwest.Wpf.Controls\obj\Debug\Nordwest.Wpf.Controls.csproj.GenerateResource.cache
+C:\Users\User\Documents\Visual Studio 2017\Projects\EPI-KIT\Nordwest.Wpf.Controls\obj\Debug\Nordwest.Wpf.Controls.csproj.CoreCompileInputs.cache
+C:\Users\User\Documents\Visual Studio 2017\Projects\EPI-KIT\Nordwest.Wpf.Controls\obj\Debug\Nordwest.Wpf.Controls.dll
+C:\Users\User\Documents\Visual Studio 2017\Projects\EPI-KIT\Nordwest.Wpf.Controls\obj\Debug\Nordwest.Wpf.Controls.pdb
+D:\VisualStudio\Projects\ElectricFieldCalculation\Nordwest.Wpf.Controls\obj\Debug\Nordwest.Wpf.Controls.csprojResolveAssemblyReference.cache
+D:\VisualStudio\Projects\ElectricFieldCalculation\Nordwest.Wpf.Controls\obj\Debug\Chart\ChartCanvas.baml
+D:\VisualStudio\Projects\ElectricFieldCalculation\Nordwest.Wpf.Controls\obj\Debug\Marks.baml
+D:\VisualStudio\Projects\ElectricFieldCalculation\Nordwest.Wpf.Controls\obj\Debug\SliderResources.baml
+D:\VisualStudio\Projects\ElectricFieldCalculation\Nordwest.Wpf.Controls\obj\Debug\Themes\Common.baml
+D:\VisualStudio\Projects\ElectricFieldCalculation\Nordwest.Wpf.Controls\obj\Debug\Themes\generic.baml
+D:\VisualStudio\Projects\ElectricFieldCalculation\Nordwest.Wpf.Controls\obj\Debug\Chart\ChartCanvas.g.cs
+D:\VisualStudio\Projects\ElectricFieldCalculation\Nordwest.Wpf.Controls\obj\Debug\Chart\ChartControl.g.cs
+D:\VisualStudio\Projects\ElectricFieldCalculation\Nordwest.Wpf.Controls\obj\Debug\DateRangeSlider.g.cs
+D:\VisualStudio\Projects\ElectricFieldCalculation\Nordwest.Wpf.Controls\obj\Debug\Marks.g.cs
+D:\VisualStudio\Projects\ElectricFieldCalculation\Nordwest.Wpf.Controls\obj\Debug\GeneratedInternalTypeHelper.g.cs
+D:\VisualStudio\Projects\ElectricFieldCalculation\Nordwest.Wpf.Controls\obj\Debug\Nordwest.Wpf.Controls_MarkupCompile.cache
+D:\VisualStudio\Projects\ElectricFieldCalculation\Nordwest.Wpf.Controls\obj\Debug\Nordwest.Wpf.Controls_MarkupCompile.lref
+D:\VisualStudio\Projects\ElectricFieldCalculation\Nordwest.Wpf.Controls\obj\Debug\Nordwest.Wpf.Controls.dll
+D:\VisualStudio\Projects\ElectricFieldCalculation\Nordwest.Wpf.Controls\obj\Debug\Nordwest.Wpf.Controls.pdb
+D:\VisualStudio\Projects\ElectricFieldCalculation\Nordwest.Wpf.Controls\bin\Debug\Nordwest.Wpf.Controls.dll
+D:\VisualStudio\Projects\ElectricFieldCalculation\Nordwest.Wpf.Controls\bin\Debug\Nordwest.Wpf.Controls.pdb
+D:\VisualStudio\Projects\ElectricFieldCalculation\Nordwest.Wpf.Controls\obj\Debug\Chart\ChartControl.baml
+D:\VisualStudio\Projects\ElectricFieldCalculation\Nordwest.Wpf.Controls\obj\Debug\DateRangeSlider.baml
+D:\VisualStudio\Projects\ElectricFieldCalculation\Nordwest.Wpf.Controls\obj\Debug\Themes\Chart.baml
+D:\VisualStudio\Projects\ElectricFieldCalculation\Nordwest.Wpf.Controls\obj\Debug\Themes\ExpandersPanel.baml
+D:\VisualStudio\Projects\ElectricFieldCalculation\Nordwest.Wpf.Controls\obj\Debug\Themes\Material.baml
+D:\VisualStudio\Projects\ElectricFieldCalculation\Nordwest.Wpf.Controls\obj\Debug\Themes\MaterialExpander.baml
+D:\VisualStudio\Projects\ElectricFieldCalculation\Nordwest.Wpf.Controls\obj\Debug\Themes\MaterialFlatIconToggleButton.baml
+D:\VisualStudio\Projects\ElectricFieldCalculation\Nordwest.Wpf.Controls\obj\Debug\Themes\MaterialTabControl.baml
+D:\VisualStudio\Projects\ElectricFieldCalculation\Nordwest.Wpf.Controls\obj\Debug\Themes\MaterialOverlayControl.baml
+D:\VisualStudio\Projects\ElectricFieldCalculation\Nordwest.Wpf.Controls\obj\Debug\Themes\PopupButton.baml
+D:\VisualStudio\Projects\ElectricFieldCalculation\Nordwest.Wpf.Controls\obj\Debug\Themes\UpDownControl.baml
+D:\VisualStudio\Projects\ElectricFieldCalculation\Nordwest.Wpf.Controls\obj\Debug\Nordwest.Wpf.Controls.g.resources
+D:\VisualStudio\Projects\ElectricFieldCalculation\Nordwest.Wpf.Controls\obj\Debug\Nordwest.Wpf.Controls.Properties.Resources.resources
+D:\VisualStudio\Projects\ElectricFieldCalculation\Nordwest.Wpf.Controls\obj\Debug\Nordwest.Wpf.Controls.csproj.GenerateResource.cache
+D:\VisualStudio\Projects\ElectricFieldCalculation\Nordwest.Wpf.Controls\obj\Debug\Nordwest.Wpf.Controls.csproj.CoreCompileInputs.cache

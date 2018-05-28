@@ -1,0 +1,296 @@
+﻿<Window x:Class="ElectricFieldCalculation.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ElectricFieldCalculation"
+        xmlns:chart="clr-namespace:Nordwest.Wpf.Controls.Chart;assembly=Nordwest.Wpf.Controls"
+        xmlns:data="clr-namespace:SynteticData.Data;assembly=ElectricFieldCalculation.Core"
+        xmlns:converters="clr-namespace:ElectricFieldCalculation.Converters"
+        xmlns:forms="clr-namespace:System.Windows.Forms;assembly=System.Windows.Forms"
+        xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
+        mc:Ignorable="d"
+        Title="Electric Field Calculation 1.4 (2018) - Епишкин Дмитрий - dmitri_epishkin@mail.ru" Height="600" Width="1125">
+    <Grid>
+        <Grid.Resources>
+            <converters:NotNullToVisibilityConverter x:Key="NotNullToVisibilityConverter"/>
+            <BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter"/>
+        </Grid.Resources>
+        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="250"/>
+            <ColumnDefinition Width="5"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <ScrollViewer VerticalScrollBarVisibility="Auto">
+            <StackPanel>
+
+                <WrapPanel>
+                    <Button BorderThickness="0"  ToolTip ="Загрузить импеданс"  Background="White" Margin="3" Padding="3" HorizontalAlignment="Left" Command="{Binding LoadImpedanceCommand}">
+                    <WrapPanel>
+                        <TextBlock FontWeight="Bold" Margin="3,3,6,3" Text="Z" TextWrapping="Wrap" VerticalAlignment="Center" MinWidth="10"/>
+                        <Image Source="Images/open.png" Width="20"></Image>
+                    </WrapPanel>
+                </Button>
+
+                    <Button BorderThickness="0" Background="White" ToolTip="Загрузить данные" Margin="3" Padding="3" Command="{Binding LoadDataCommand}">
+                    <WrapPanel>
+                        <TextBlock FontWeight="Bold" Margin="3,3,6,3" Text="Данные"  VerticalAlignment="Center" TextWrapping="Wrap"/>
+                        <Image Source="Images/open.png" Width="20"></Image>
+                    </WrapPanel>
+                </Button>
+
+                    <Button BorderThickness="0" Background="White" Margin="3" ToolTip="Загрузить GIC" Padding="3" Command="{Binding LoadGicCommand}">
+                    <WrapPanel>
+                        <TextBlock FontWeight="Bold" Margin="3,3,6,3" Text="GIC"  VerticalAlignment="Center" TextWrapping="Wrap"/>
+                        <Image Source="Images/open.png" Width="20"></Image>
+                    </WrapPanel>
+                </Button>
+
+                </WrapPanel>
+
+                <StackPanel Visibility="{Binding Z, Converter={StaticResource NotNullToVisibilityConverter}}">
+                    <TextBlock FontWeight="Bold" Margin="3,3,3,0" Text="Импеданс:" TextWrapping="Wrap" MinWidth="100"/>
+                    <TextBlock Margin="3" Text="{Binding Z.Name}" TextWrapping="Wrap" MinWidth="100"/>
+                </StackPanel>
+
+                <StackPanel Visibility="{Binding DataRepository.Name, Converter={StaticResource NotNullToVisibilityConverter}}">
+                    <TextBlock FontWeight="Bold" Margin="3,3,3,0" Text="Данные:" TextWrapping="Wrap" MinWidth="100"/>
+                    <TextBlock Margin="3" Text="{Binding DataRepository.Name}" TextWrapping="Wrap" MinWidth="100"/>
+                </StackPanel>
+
+                <StackPanel Visibility="{Binding Gic, Converter={StaticResource NotNullToVisibilityConverter}}">
+                    <TextBlock FontWeight="Bold" Margin="3,3,3,0" Text="GIC:" TextWrapping="Wrap" MinWidth="100"/>
+                    <TextBlock Margin="3" Text="{Binding GicFileName}" TextWrapping="Wrap" MinWidth="100"/>
+                </StackPanel>
+                
+                <ListView Margin="3,6,3,3" ItemsSource="{Binding DataRepository.All}" SelectionChanged="ListView_SelectionChanged" MaxHeight="300">
+                    <ListView.ItemTemplate>
+                        <DataTemplate DataType="{x:Type data:SiteData}">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="40"/>
+                                    <ColumnDefinition Width="24"/>
+                                    <ColumnDefinition Width="24"/>
+                                    <ColumnDefinition Width="24"/>
+                                    <ColumnDefinition Width="24"/>
+                                    <ColumnDefinition Width="24"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                </Grid.ColumnDefinitions>
+
+                                <TextBlock Grid.Column="0" FontWeight="Bold">
+                                    <Run Text="{Binding Name}" />
+                                    <Run Text=":"/>
+                                </TextBlock>
+
+                                <TextBlock Grid.Column="1" Text="HX" Visibility="{Binding Hx, Converter={StaticResource NotNullToVisibilityConverter}}"/>
+                                <TextBlock Grid.Column="2" Text="HY" Visibility="{Binding Hy, Converter={StaticResource NotNullToVisibilityConverter}}"/>
+                                <TextBlock Grid.Column="3" Text="HZ" Visibility="{Binding Hz, Converter={StaticResource NotNullToVisibilityConverter}}"/>
+
+
+                                <TextBlock Grid.Column="4" Text="EX" Visibility="{Binding Ex, Converter={StaticResource NotNullToVisibilityConverter}}"/>
+                                <TextBlock Grid.Column="5" Text="EY" Visibility="{Binding Ey, Converter={StaticResource NotNullToVisibilityConverter}}"/>
+
+                                <TextBlock Grid.Column="6" Text="GIC" Visibility="{Binding Gic, Converter={StaticResource NotNullToVisibilityConverter}}"/>
+                                
+                            </Grid>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+
+                <Separator Margin="3,6,3,3"/>
+
+                <StackPanel Background="AliceBlue">
+
+                    <Button Margin="3,6,3,3" Background="White" BorderThickness="0" Padding="3" Command="{Binding Status.RunCommand}">
+                        <WrapPanel>
+                            <TextBlock Margin="0,0,6,0" Text="Запустить расчёт" VerticalAlignment="Center"/>
+                            <Image Source="Images/rocket.png" Width="24"/>
+                        </WrapPanel>
+                    </Button>
+
+                    <ProgressBar Minimum="0" Maximum="100" Margin="3" Height="20" Value="{Binding Status.Progress}" Visibility="{Binding Status.IsCalculating, Converter={StaticResource BooleanToVisibilityConverter}}"/>
+
+                    <TextBlock Foreground="DarkRed" Text="{Binding Status.Message}" Margin="3" TextWrapping="Wrap" MinWidth="100" HorizontalAlignment="Center"/>
+
+                    <TextBlock Text="Настройки:" Margin="3,6,3,3" FontWeight="Bold"/>
+
+                    <WrapPanel HorizontalAlignment="Right">
+                        <TextBlock Margin="3" Text="Cкользящее окно:" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        <ComboBox Margin="3" ItemsSource="{Binding AvailableWindows}" SelectedItem="{Binding Window}" Width="100"/>
+                    </WrapPanel>
+
+                    <WrapPanel HorizontalAlignment="Right">
+                        <TextBlock Margin="3" Text="Шаг:" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        <xctk:IntegerUpDown Margin="3" Value="{Binding Step}" Width="100"/>
+                    </WrapPanel>
+
+                    <CheckBox Content="Убирать тренд" HorizontalAlignment="Right" Margin="3" IsChecked="{Binding AcFilter}"/>
+
+                    <Separator Margin="3,6,3,3"/>
+
+                </StackPanel>
+
+                <Button Margin="3,6,3,3" Background="White" BorderThickness="0" Padding="3" Command="{Binding SaveDataCommand}">
+                    <WrapPanel>
+                        <TextBlock Margin="0,0,6,0" Text="Сохранить данные" VerticalAlignment="Center"/>
+                        <Image Source="Images/save.png" Width="24"/>
+                    </WrapPanel>
+                </Button>
+
+                <Button Margin="3,6,3,3" Background="White" BorderThickness="0" Padding="3" Command="{Binding ExportCommand}">
+                    <WrapPanel>
+                        <TextBlock Margin="0,0,6,0" Text="Экспорт изображения.." VerticalAlignment="Center"/>
+                        <Image Source="Images/jpeg.png" Width="24"/>
+                    </WrapPanel>
+                </Button>
+
+            </StackPanel>
+        </ScrollViewer>
+        
+        <GridSplitter Grid.Column="1" Width="5" ResizeDirection="Columns" ResizeBehavior="PreviousAndNext"/>
+        
+        <Grid Grid.Column="2" Margin="3,0,0,0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+            <WrapPanel VerticalAlignment="Top">
+                <TextBlock FontWeight="Bold" Text="Просмотр:" VerticalAlignment="Center" Margin="6,3,3,3"/>
+                <RadioButton Margin="3" x:Name="tsBtn" VerticalAlignment="Center" Content="Временные ряды" IsChecked="true"/>
+                <RadioButton Margin="3" x:Name="zBtn"  VerticalAlignment="Center" Content="Импеданс (Z)"/>
+
+                <StackPanel Orientation="Horizontal" Margin="6,3,0,3" VerticalAlignment="Center" Visibility="{Binding ElementName= tsBtn, Path=IsChecked, Converter={StaticResource BooleanToVisibilityConverter}}">
+                    <TextBlock FontWeight="Bold" Text="Показывать:" VerticalAlignment="Center"/>
+                    <CheckBox x:Name="Gic" Margin="3" Content="Gic" IsChecked="True" Click="Gic_OnClick"/>
+                    <CheckBox x:Name="Ex" Margin="3" Content="Ex" IsChecked="True" Click="Gic_OnClick"/>
+                    <CheckBox x:Name="Ey" Margin="3" Content="Ey" IsChecked="True" Click="Gic_OnClick"/>
+                    <CheckBox x:Name="Hx" Margin="3" Content="Hx" IsChecked="True" Click="Gic_OnClick"/>
+                    <CheckBox x:Name="Hy" Margin="3" Content="Hy" IsChecked="True" Click="Gic_OnClick"/>
+                    <CheckBox x:Name="Dx" Margin="3" Content="dHx/dt" IsChecked="True" Click="Gic_OnClick"/>
+                    <CheckBox x:Name="Dy" Margin="3" Content="dHy/dt" IsChecked="True" Click="Gic_OnClick"/>
+                </StackPanel>
+
+                <CheckBox Content="Всё на отдельные графики" Margin="6,3,3,3" IsChecked="{Binding SeparateCharts}" VerticalAlignment="Center"/>
+
+            </WrapPanel>
+
+            <ScrollViewer Grid.Row="1" Visibility="{Binding ElementName=tsBtn, Path=IsChecked, Converter={StaticResource BooleanToVisibilityConverter}}">
+                <Grid x:Name="TsChartsGrid" Background="White" Margin="0,0,0,10" HorizontalAlignment="Stretch">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+
+                    <Grid x:Name="GicGrid" Grid.Row="0" Height="180" Margin="0,0,0,-10">
+                        <chart:ChartControl Margin="0,0,0,0" x:Name="GicChart"/>
+                        <StackPanel x:Name="GicLegend" Orientation="Horizontal" Margin="50,5" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                        <TextBlock Grid.Row="0" Text="I (GIC), А" HorizontalAlignment="Right" Margin="50,5" FontSize="16" FontWeight="Bold"/>
+                        <TextBlock Grid.Row="0" Text="Время, часы" FontSize="14" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="55,35"/>
+                    </Grid>
+
+                    <Grid x:Name="ExGrid" Height="180" Grid.Row="1" Margin="0,0,0,-10">
+                        <chart:ChartControl x:Name="ExChart" Margin="0,0,0,0"/>
+                        <StackPanel x:Name="ExLegend" Orientation="Horizontal" Margin="50,5" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                        <TextBlock Grid.Row="1" Text="Ex, мВ/км" HorizontalAlignment="Right" Margin="50,5" FontSize="16" FontWeight="Bold"/>
+                        <TextBlock Grid.Row="1" Text="Время, часы" FontSize="14" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="55,35"/>
+                    </Grid>
+
+                    <Grid x:Name="EyGrid" Height="180"  Grid.Row="2" Margin="0,0,0,-10">
+                        <chart:ChartControl x:Name="EyChart" Margin="0,0,0,0"/>
+                        <StackPanel x:Name="EyLegend" Orientation="Horizontal" Margin="50,5" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                        <TextBlock Grid.Row="2" Text="Ey, мВ/км" HorizontalAlignment="Right" Margin="50,5" FontSize="16" FontWeight="Bold"/>
+                        <TextBlock Grid.Row="2" Text="Время, часы" FontSize="14" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="55,35"/>
+                    </Grid>
+
+                    <Grid x:Name="HxGrid" Height="180" Grid.Row="3" Margin="0,0,0,-10">
+                        <chart:ChartControl x:Name="HxChart" Margin="0,0,0,0"/>
+                        <StackPanel x:Name="HxLegend" Orientation="Horizontal" Margin="50,5" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                        <TextBlock Grid.Row="3" Text="Hx, нТл" HorizontalAlignment="Right" Margin="50,5" FontSize="16" FontWeight="Bold"/>
+                        <TextBlock Grid.Row="3" Text="Время, часы" FontSize="14" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="55,35"/>
+                    </Grid>
+
+                    <Grid x:Name="HyGrid" Height="180"  Grid.Row="4" Margin="0,0,0,-10">
+                        <chart:ChartControl  x:Name="HyChart" Margin="0,0,0,0"/>
+                        <StackPanel x:Name="HyLegend" Orientation="Horizontal" Margin="50,5" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                        <TextBlock Grid.Row="4" Text="Hy, нТл" HorizontalAlignment="Right" Margin="50,5" FontSize="16" FontWeight="Bold"/>
+                        <TextBlock Grid.Row="4" Text="Время, часы" FontSize="14" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="55,35"/>
+                    </Grid>
+
+                    <Grid x:Name="dHxGrid" Height="180" Grid.Row="5" Margin="0,0,0,-10">
+                        <chart:ChartControl x:Name="dHxChart" Margin="0,0,0,0"/>
+                        <StackPanel x:Name="dHxLegend" Orientation="Horizontal" Margin="50,5" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                        <TextBlock Grid.Row="5" Text="dHx/dt" HorizontalAlignment="Right" Margin="50,5" FontSize="16" FontWeight="Bold"/>
+                        <TextBlock Grid.Row="5" Text="Время, часы" FontSize="14" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="55,35"/>
+                    </Grid>
+
+                    <Grid x:Name="dHyGrid" Height="180" Grid.Row="6" Margin="0,0,0,-10">
+                        <chart:ChartControl x:Name="dHyChart" Margin="0,0,0,0" />
+                        <StackPanel x:Name="dHyLegend" Orientation="Horizontal" Margin="50,5" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                        <TextBlock Grid.Row="6" Text="dHy/dt" HorizontalAlignment="Right" Margin="50,5" FontSize="16" FontWeight="Bold"/>
+                        <TextBlock Grid.Row="6" Text="Время, часы" FontSize="14" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="55,35"/>
+                    </Grid>
+                </Grid>
+            </ScrollViewer>
+
+            <Grid x:Name="ZChartsGrid" Grid.Row="1"  Visibility="{Binding ElementName=zBtn, Path=IsChecked, Converter={StaticResource BooleanToVisibilityConverter}}">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+
+                <chart:ChartControl Grid.Row="0" Grid.Column="0" x:Name="MainImpedanceChart"/>
+                <TextBlock Text="T, периоды" Grid.Row="0" Grid.Column="0" FontSize="16" VerticalAlignment="Bottom" HorizontalAlignment="Center" Margin="55,-10"/>
+                <TextBlock Text="Импеданс" Grid.Row="0" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="0,0">
+                    <TextBlock.LayoutTransform>
+                        <RotateTransform Angle="-90"/>
+                    </TextBlock.LayoutTransform>
+                </TextBlock>
+                <TextBlock Text="Zxy" FontWeight="Bold" FontSize="16" Grid.Row="0" Grid.Column="0" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="60,35"/>
+                <TextBlock Text="Zyx" FontWeight="Bold" FontSize="16" Foreground="DarkRed" Grid.Row="0" Grid.Column="0" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="60,55"/>
+
+                <chart:ChartControl Grid.Row="0" Grid.Column="1" x:Name="MainPhaseChart"/>
+                <TextBlock Text="T, периоды" FontSize="16" Grid.Row="0" Grid.Column="1" VerticalAlignment="Bottom" HorizontalAlignment="Center" Margin="55,-10"/>
+                <TextBlock Text="Фаза, градусы" Grid.Row="0" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="0,0">
+                    <TextBlock.LayoutTransform>
+                        <RotateTransform Angle="-90"/>
+                    </TextBlock.LayoutTransform>
+                </TextBlock>
+                <TextBlock Text="φxy" FontWeight="Bold" FontSize="16" Grid.Row="0" Grid.Column="1" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="60,35"/>
+                <TextBlock Text="φyx" FontWeight="Bold" FontSize="16" Foreground="DarkRed" Grid.Row="0" Grid.Column="1" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="60,55"/>
+
+                <chart:ChartControl Grid.Row="1" Grid.Column="0" x:Name="AddImpedanceChart"/>
+                <TextBlock Text="Импеданс" Grid.Row="1" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="0,0">
+                    <TextBlock.LayoutTransform>
+                        <RotateTransform Angle="-90"/>
+                    </TextBlock.LayoutTransform>
+                </TextBlock>
+                <TextBlock Text="Zxx" FontWeight="Bold" FontSize="16" Grid.Row="1" Grid.Column="0" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="60,35"/>
+                <TextBlock Text="Zyy" FontWeight="Bold" FontSize="16" Foreground="DarkRed" Grid.Row="1" Grid.Column="0" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="60,55"/>
+
+                <chart:ChartControl Grid.Row="1" Grid.Column="1" x:Name="AddPhaseChart"/>
+                <TextBlock Text="φxx" FontWeight="Bold" FontSize="16" Grid.Row="1" Grid.Column="1" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="60,35"/>
+                <TextBlock Text="φyy" FontWeight="Bold" FontSize="16" Foreground="DarkRed" Grid.Row="1" Grid.Column="1" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="60,55"/>
+                <TextBlock Text="Фаза, градусы" Grid.Row="1" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="0,0">
+                    <TextBlock.LayoutTransform>
+                        <RotateTransform Angle="-90"/>
+                    </TextBlock.LayoutTransform>
+                </TextBlock>
+
+            </Grid>
+
+        </Grid>
+    </Grid>
+</Window>
+

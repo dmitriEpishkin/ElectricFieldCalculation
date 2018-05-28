@@ -1,0 +1,9 @@
+TimeSeriesPath         = D:\генерация рядов\2018-03-31\INPUT\loz_2012_11_14_mnt.txt
+ImpedancePath          = D:\генерация рядов\2018-03-31\INPUT\B50_RR.FTF
+OutputTimeSeriesPath   = D:\генерация рядов\2018-03-31\INPUT\loz_2012_11_14_mnt_E_generated.txt
+OutputPowerSpectraPath = D:\генерация рядов\2018-03-31\INPUT\loz_2012_11_14_mnt_E_generated.csv
+WindowForGenerating    = 8192
+StepForGenerating      = 1
+PowerSpectraWindow     = 8192
+AcFilter               = Вкл
+

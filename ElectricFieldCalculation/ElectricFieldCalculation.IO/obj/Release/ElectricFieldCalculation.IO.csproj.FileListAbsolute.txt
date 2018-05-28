@@ -1,0 +1,17 @@
+C:\Users\User\Documents\Visual Studio 2015\Projects\ElectricFieldCalculation\ElectricFieldCalculation.IO\bin\Release\ElectricFieldCalculation.IO.dll
+C:\Users\User\Documents\Visual Studio 2015\Projects\ElectricFieldCalculation\ElectricFieldCalculation.IO\bin\Release\ElectricFieldCalculation.IO.pdb
+C:\Users\User\Documents\Visual Studio 2015\Projects\ElectricFieldCalculation\ElectricFieldCalculation.IO\bin\Release\ElectricFieldCalculation.Core.dll
+C:\Users\User\Documents\Visual Studio 2015\Projects\ElectricFieldCalculation\ElectricFieldCalculation.IO\bin\Release\ElectricFieldCalculation.Core.pdb
+C:\Users\User\Documents\Visual Studio 2015\Projects\ElectricFieldCalculation\ElectricFieldCalculation.IO\obj\Release\ElectricFieldCalculation.IO.csprojResolveAssemblyReference.cache
+C:\Users\User\Documents\Visual Studio 2015\Projects\ElectricFieldCalculation\ElectricFieldCalculation.IO\obj\Release\ElectricFieldCalculation.IO.dll
+C:\Users\User\Documents\Visual Studio 2015\Projects\ElectricFieldCalculation\ElectricFieldCalculation.IO\obj\Release\ElectricFieldCalculation.IO.pdb
+D:\VisualStudio\Projects\ElectricFieldCalculation\ElectricFieldCalculation.IO\bin\Release\ElectricFieldCalculation.IO.dll
+D:\VisualStudio\Projects\ElectricFieldCalculation\ElectricFieldCalculation.IO\bin\Release\ElectricFieldCalculation.IO.pdb
+D:\VisualStudio\Projects\ElectricFieldCalculation\ElectricFieldCalculation.IO\bin\Release\ElectricFieldCalculation.Core.dll
+D:\VisualStudio\Projects\ElectricFieldCalculation\ElectricFieldCalculation.IO\bin\Release\WpfApplicationFramework.dll
+D:\VisualStudio\Projects\ElectricFieldCalculation\ElectricFieldCalculation.IO\bin\Release\ElectricFieldCalculation.Core.pdb
+D:\VisualStudio\Projects\ElectricFieldCalculation\ElectricFieldCalculation.IO\bin\Release\WpfApplicationFramework.pdb
+D:\VisualStudio\Projects\ElectricFieldCalculation\ElectricFieldCalculation.IO\bin\Release\WpfApplicationFramework.xml
+D:\VisualStudio\Projects\ElectricFieldCalculation\ElectricFieldCalculation.IO\obj\Release\ElectricFieldCalculation.IO.csprojResolveAssemblyReference.cache
+D:\VisualStudio\Projects\ElectricFieldCalculation\ElectricFieldCalculation.IO\obj\Release\ElectricFieldCalculation.IO.dll
+D:\VisualStudio\Projects\ElectricFieldCalculation\ElectricFieldCalculation.IO\obj\Release\ElectricFieldCalculation.IO.pdb

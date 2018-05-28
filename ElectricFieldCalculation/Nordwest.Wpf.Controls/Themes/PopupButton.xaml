@@ -1,0 +1,35 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:controls="clr-namespace:Nordwest.Wpf.Controls">
+    <Style TargetType="{x:Type controls:PopupButton}">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="controls:PopupButton">
+                    <Grid>
+                        <ToggleButton x:Name="Button" 
+                                      IsChecked="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=IsChecked, Mode=TwoWay}"
+                                      IsHitTestVisible="{Binding ElementName=Popup, Path=IsOpen, Mode=OneWay, Converter={x:Static controls:PopupButton.InvertBooleanConverter}}" 
+                                      Content="{TemplateBinding Header}" 
+                                      ContentTemplate="{TemplateBinding HeaderTemplate}"
+                                      HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
+                                      Style="{TemplateBinding ButtonStyle}"/>
+
+                        <Popup x:Name="Popup" 
+                               IsOpen="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=IsChecked, Mode=TwoWay}"
+                               PlacementTarget="{Binding ElementName=Button}" 
+                               Placement="{TemplateBinding PopupPlacementMode}"
+                               PopupAnimation="{TemplateBinding PopupAnimation}"
+                               VerticalOffset="{TemplateBinding VerticalOffset}"
+                               HorizontalOffset="{TemplateBinding HorizontalOffset}"
+                               StaysOpen="False" AllowsTransparency="True"
+                               CustomPopupPlacementCallback="{TemplateBinding PopupPlacementCallback}">
+                            <ContentPresenter Content="{TemplateBinding Content}"
+                                              ContentTemplate="{TemplateBinding ContentTemplate}"/>
+                        </Popup>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="PopupPlacementMode" Value="Bottom"/>
+    </Style>
+</ResourceDictionary>

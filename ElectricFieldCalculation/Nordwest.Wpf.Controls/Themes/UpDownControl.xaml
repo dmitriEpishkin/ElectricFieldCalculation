@@ -1,0 +1,45 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:Controls="clr-namespace:Nordwest.Wpf.Controls">
+
+    <Style TargetType="{x:Type Controls:UpDownControl}">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Controls:UpDownControl">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition Width="16"/>
+                        </Grid.ColumnDefinitions>
+
+                        <TextBox x:Name="TextBox" Grid.RowSpan="2" Text="{Binding RelativeSource={RelativeSource Mode=TemplatedParent}, Path=Value}" />
+                        <RepeatButton x:Name="UpButton" Grid.Column="1">
+                            <RepeatButton.Content>
+                                <ContentControl>
+                                    <ContentControl.LayoutTransform>
+                                        <RotateTransform  Angle="90" />
+                                    </ContentControl.LayoutTransform>
+                                    <Path Data="M 0,0 L 1,1 L 1,-1 Z" Fill="Black" Stretch="Uniform" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                                </ContentControl>
+                            </RepeatButton.Content>
+                        </RepeatButton>
+                        <RepeatButton x:Name="DownButton" Grid.Column="1" Grid.Row="1">
+                            <RepeatButton.Content>
+                                <ContentControl>
+                                    <ContentControl.LayoutTransform>
+                                        <RotateTransform  Angle="-90" />
+                                    </ContentControl.LayoutTransform>
+                                    <Path Data="M 0,0 L 1,1 L 1,-1 Z" Fill="Black" Stretch="Uniform" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                                </ContentControl>
+                            </RepeatButton.Content>
+                        </RepeatButton>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+</ResourceDictionary>

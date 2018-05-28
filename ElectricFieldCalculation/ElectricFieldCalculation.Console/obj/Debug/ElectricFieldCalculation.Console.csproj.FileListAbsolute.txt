@@ -1,0 +1,32 @@
+C:\Users\User\Documents\Visual Studio 2015\Projects\ElectricFieldCalculation\ElectricFieldCalculation.Console\bin\Debug\ElectricFieldCalculation.Console.exe.config
+C:\Users\User\Documents\Visual Studio 2015\Projects\ElectricFieldCalculation\ElectricFieldCalculation.Console\bin\Debug\ElectricFieldCalculation.Console.exe
+C:\Users\User\Documents\Visual Studio 2015\Projects\ElectricFieldCalculation\ElectricFieldCalculation.Console\bin\Debug\ElectricFieldCalculation.Console.pdb
+C:\Users\User\Documents\Visual Studio 2015\Projects\ElectricFieldCalculation\ElectricFieldCalculation.Console\bin\Debug\ElectricFieldCalculation.Core.dll
+C:\Users\User\Documents\Visual Studio 2015\Projects\ElectricFieldCalculation\ElectricFieldCalculation.Console\bin\Debug\ElectricFieldCalculation.IO.dll
+C:\Users\User\Documents\Visual Studio 2015\Projects\ElectricFieldCalculation\ElectricFieldCalculation.Console\bin\Debug\ElectricFieldCalculation.Core.pdb
+C:\Users\User\Documents\Visual Studio 2015\Projects\ElectricFieldCalculation\ElectricFieldCalculation.Console\bin\Debug\ElectricFieldCalculation.IO.pdb
+C:\Users\User\Documents\Visual Studio 2015\Projects\ElectricFieldCalculation\ElectricFieldCalculation.Console\obj\Debug\ElectricFieldCalculation.Console.csprojResolveAssemblyReference.cache
+C:\Users\User\Documents\Visual Studio 2015\Projects\ElectricFieldCalculation\ElectricFieldCalculation.Console\obj\Debug\ElectricFieldCalculation.Console.exe
+C:\Users\User\Documents\Visual Studio 2015\Projects\ElectricFieldCalculation\ElectricFieldCalculation.Console\obj\Debug\ElectricFieldCalculation.Console.pdb
+C:\Users\Епишкин Дмитрий\Documents\Code\VisualStudioProjects-2015\ElectricFieldCalculation\ElectricFieldCalculation.Console\bin\Debug\ElectricFieldCalculation.Console.exe.config
+C:\Users\Епишкин Дмитрий\Documents\Code\VisualStudioProjects-2015\ElectricFieldCalculation\ElectricFieldCalculation.Console\bin\Debug\ElectricFieldCalculation.Console.exe
+C:\Users\Епишкин Дмитрий\Documents\Code\VisualStudioProjects-2015\ElectricFieldCalculation\ElectricFieldCalculation.Console\bin\Debug\ElectricFieldCalculation.Console.pdb
+C:\Users\Епишкин Дмитрий\Documents\Code\VisualStudioProjects-2015\ElectricFieldCalculation\ElectricFieldCalculation.Console\bin\Debug\ElectricFieldCalculation.Core.dll
+C:\Users\Епишкин Дмитрий\Documents\Code\VisualStudioProjects-2015\ElectricFieldCalculation\ElectricFieldCalculation.Console\bin\Debug\ElectricFieldCalculation.IO.dll
+C:\Users\Епишкин Дмитрий\Documents\Code\VisualStudioProjects-2015\ElectricFieldCalculation\ElectricFieldCalculation.Console\bin\Debug\ElectricFieldCalculation.Core.pdb
+C:\Users\Епишкин Дмитрий\Documents\Code\VisualStudioProjects-2015\ElectricFieldCalculation\ElectricFieldCalculation.Console\bin\Debug\ElectricFieldCalculation.IO.pdb
+C:\Users\Епишкин Дмитрий\Documents\Code\VisualStudioProjects-2015\ElectricFieldCalculation\ElectricFieldCalculation.Console\obj\Debug\ElectricFieldCalculation.Console.csprojResolveAssemblyReference.cache
+C:\Users\Епишкин Дмитрий\Documents\Code\VisualStudioProjects-2015\ElectricFieldCalculation\ElectricFieldCalculation.Console\obj\Debug\ElectricFieldCalculation.Console.csproj.CoreCompileInputs.cache
+C:\Users\Епишкин Дмитрий\Documents\Code\VisualStudioProjects-2015\ElectricFieldCalculation\ElectricFieldCalculation.Console\obj\Debug\ElectricFieldCalculation.Console.csproj.CopyComplete
+C:\Users\Епишкин Дмитрий\Documents\Code\VisualStudioProjects-2015\ElectricFieldCalculation\ElectricFieldCalculation.Console\obj\Debug\ElectricFieldCalculation.Console.exe
+C:\Users\Епишкин Дмитрий\Documents\Code\VisualStudioProjects-2015\ElectricFieldCalculation\ElectricFieldCalculation.Console\obj\Debug\ElectricFieldCalculation.Console.pdb
+D:\VisualStudio\Projects\ElectricFieldCalculation\ElectricFieldCalculation.Console\bin\Debug\ElectricFieldCalculation.Console.exe.config
+D:\VisualStudio\Projects\ElectricFieldCalculation\ElectricFieldCalculation.Console\obj\Debug\ElectricFieldCalculation.Console.exe
+D:\VisualStudio\Projects\ElectricFieldCalculation\ElectricFieldCalculation.Console\obj\Debug\ElectricFieldCalculation.Console.pdb
+D:\VisualStudio\Projects\ElectricFieldCalculation\ElectricFieldCalculation.Console\bin\Debug\ElectricFieldCalculation.Console.exe
+D:\VisualStudio\Projects\ElectricFieldCalculation\ElectricFieldCalculation.Console\bin\Debug\ElectricFieldCalculation.Console.pdb
+D:\VisualStudio\Projects\ElectricFieldCalculation\ElectricFieldCalculation.Console\bin\Debug\ElectricFieldCalculation.Core.dll
+D:\VisualStudio\Projects\ElectricFieldCalculation\ElectricFieldCalculation.Console\bin\Debug\ElectricFieldCalculation.IO.dll
+D:\VisualStudio\Projects\ElectricFieldCalculation\ElectricFieldCalculation.Console\bin\Debug\ElectricFieldCalculation.Core.pdb
+D:\VisualStudio\Projects\ElectricFieldCalculation\ElectricFieldCalculation.Console\bin\Debug\ElectricFieldCalculation.IO.pdb
+D:\VisualStudio\Projects\ElectricFieldCalculation\ElectricFieldCalculation.Console\obj\Debug\ElectricFieldCalculation.Console.csprojResolveAssemblyReference.cache

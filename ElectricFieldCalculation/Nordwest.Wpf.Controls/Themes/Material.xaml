@@ -1,0 +1,544 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:system="clr-namespace:System;assembly=mscorlib"
+                    xmlns:local="clr-namespace:Nordwest.Wpf.Controls"
+                    xmlns:material="clr-namespace:Nordwest.Wpf.Controls.Material">
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="Common.xaml"/>
+    </ResourceDictionary.MergedDictionaries>
+    
+    <system:Double x:Key="ShadowDirection">270</system:Double>
+    
+    <system:Double x:Key="Shadow1Depth">1</system:Double>
+    <system:Double x:Key="Shadow2Depth">2.5</system:Double>
+    <system:Double x:Key="Shadow3Depth">4.5</system:Double>
+    <system:Double x:Key="Shadow4Depth">8</system:Double>
+    <system:Double x:Key="Shadow5Depth">13</system:Double>
+    
+    <system:Double x:Key="Shadow1BlurRadius">5</system:Double>
+    <system:Double x:Key="Shadow2BlurRadius">8</system:Double>
+    <system:Double x:Key="Shadow3BlurRadius">14</system:Double>
+    <system:Double x:Key="Shadow4BlurRadius">25</system:Double>
+    <system:Double x:Key="Shadow5BlurRadius">35</system:Double>
+    
+    <Color x:Key="Shadow1Color">#CCCCCC</Color>
+    <Color x:Key="Shadow2Color">#BBBBBB</Color>
+    <Color x:Key="Shadow3Color">#BBBBBB</Color>
+    <Color x:Key="Shadow4Color">#BBBBBB</Color>
+    <Color x:Key="Shadow5Color">#BBBBBB</Color>
+
+    <DropShadowEffect x:Key="Shadow1" BlurRadius="{StaticResource Shadow1BlurRadius}" ShadowDepth="{StaticResource Shadow1Depth}" Direction="{StaticResource ShadowDirection}" Color="{StaticResource Shadow1Color}"/>
+    <DropShadowEffect x:Key="Shadow2" BlurRadius="{StaticResource Shadow2BlurRadius}" ShadowDepth="{StaticResource Shadow2Depth}" Direction="{StaticResource ShadowDirection}" Color="{StaticResource Shadow2Color}"/>
+    <DropShadowEffect x:Key="Shadow3" BlurRadius="{StaticResource Shadow3BlurRadius}" ShadowDepth="{StaticResource Shadow3Depth}" Direction="{StaticResource ShadowDirection}" Color="{StaticResource Shadow3Color}"/>
+    <DropShadowEffect x:Key="Shadow4" BlurRadius="{StaticResource Shadow4BlurRadius}" ShadowDepth="{StaticResource Shadow4Depth}" Direction="{StaticResource ShadowDirection}" Color="{StaticResource Shadow4Color}"/>
+    <DropShadowEffect x:Key="Shadow5" BlurRadius="{StaticResource Shadow5BlurRadius}" ShadowDepth="{StaticResource Shadow5Depth}" Direction="{StaticResource ShadowDirection}" Color="{StaticResource Shadow5Color}"/>
+
+    <Thickness x:Key="Shadow1Thickness">5, 4, 5, 6</Thickness>
+    <Thickness x:Key="Shadow2Thickness">8, 5.5, 8, 13.5</Thickness>
+    <Thickness x:Key="Shadow3Thickness">14, 10.5, 14, 18.5</Thickness>
+    <Thickness x:Key="Shadow4Thickness">25, 17, 25, 33</Thickness>
+    <Thickness x:Key="Shadow5Thickness">35, 22, 35, 48</Thickness>
+    
+    <Color x:Key="EnabledIconColor" >#89000000</Color>
+    <Color x:Key="EnabledTextColor">Black</Color>
+    <Color x:Key="DisabledIconColor" >#44000000</Color>
+    <Color x:Key="DisabledTextColor">#44000000</Color>
+    <Color x:Key="NormalFlatButtonBackground">#00999999</Color>
+    <Color x:Key="HoverFlatButtonBackground">#32999999</Color>
+    <Color x:Key="PressedFlatButtonBackground">#66999999</Color>
+    <Color x:Key="DividerColor">#1F000000</Color>
+    <SolidColorBrush x:Key="EnabledIconBrush" Color="{StaticResource EnabledIconColor}" />
+    <SolidColorBrush x:Key="EnabledTextBrush" Color="{StaticResource EnabledTextColor}" />
+    <SolidColorBrush x:Key="DividerBrush" Color="{StaticResource DividerColor}" />
+
+    <Color x:Key="PrimaryColor">#607D8B</Color>
+    <Color x:Key="LightPrimaryColor">#CFD8DC</Color>
+    <SolidColorBrush x:Key="PrimaryBrush" Color="{StaticResource PrimaryColor}"/>
+    <SolidColorBrush x:Key="LightPrimaryBrush" Color="{StaticResource LightPrimaryColor}"/>
+
+    <material:Palette x:Key="DefaultPalette"/>
+    
+    <Style x:Key="ButtonTextStyle" >
+        <Setter Property="TextElement.FontFamily" Value="{x:Static material:Fonts.Roboto}"/>
+        <Setter Property="TextElement.FontSize" Value="{Binding Source={x:Static material:Fonts.BUTTON}, Path=Size}"/>
+        <Setter Property="TextElement.FontWeight" Value="{Binding Source={x:Static material:Fonts.BUTTON}, Path=Weight}"/>
+        <Setter Property="TextElement.FontStyle" Value="{Binding Source={x:Static material:Fonts.BUTTON}, Path=Style}"/>
+        <Setter Property="TextElement.FontStretch" Value="{Binding Source={x:Static material:Fonts.BUTTON}, Path=Stretch}"/>
+    </Style>
+    <Style x:Key="SubheadTextStyle" >
+        <Setter Property="TextElement.FontFamily" Value="{x:Static material:Fonts.Roboto}"/>
+        <Setter Property="TextElement.FontSize" Value="{Binding Source={x:Static material:Fonts.Subhead}, Path=Size}"/>
+        <Setter Property="TextElement.FontWeight" Value="{Binding Source={x:Static material:Fonts.Subhead}, Path=Weight}"/>
+        <Setter Property="TextElement.FontStyle" Value="{Binding Source={x:Static material:Fonts.Subhead}, Path=Style}"/>
+        <Setter Property="TextElement.FontStretch" Value="{Binding Source={x:Static material:Fonts.Subhead}, Path=Stretch}"/>
+    </Style>
+    <Style x:Key="Body2TextStyle" >
+        <Setter Property="TextElement.FontFamily" Value="{x:Static material:Fonts.Roboto}"/>
+        <Setter Property="TextElement.FontSize" Value="{Binding Source={x:Static material:Fonts.Body2}, Path=Size}"/>
+        <Setter Property="TextElement.FontWeight" Value="{Binding Source={x:Static material:Fonts.Body2}, Path=Weight}"/>
+        <Setter Property="TextElement.FontStyle" Value="{Binding Source={x:Static material:Fonts.Body2}, Path=Style}"/>
+        <Setter Property="TextElement.FontStretch" Value="{Binding Source={x:Static material:Fonts.Body2}, Path=Stretch}"/>
+    </Style>
+    <Style x:Key="Body1TextStyle" >
+        <Setter Property="TextElement.FontFamily" Value="{x:Static material:Fonts.Roboto}"/>
+        <Setter Property="TextElement.FontSize" Value="{Binding Source={x:Static material:Fonts.Body1}, Path=Size}"/>
+        <Setter Property="TextElement.FontWeight" Value="{Binding Source={x:Static material:Fonts.Body1}, Path=Weight}"/>
+        <Setter Property="TextElement.FontStyle" Value="{Binding Source={x:Static material:Fonts.Body1}, Path=Style}"/>
+        <Setter Property="TextElement.FontStretch" Value="{Binding Source={x:Static material:Fonts.Body1}, Path=Stretch}"/>
+    </Style>
+    <Style x:Key="CaptionTextStyle" >
+        <Setter Property="TextElement.FontFamily" Value="{x:Static material:Fonts.Roboto}"/>
+        <Setter Property="TextElement.FontSize" Value="{Binding Source={x:Static material:Fonts.Caption}, Path=Size}"/>
+        <Setter Property="TextElement.FontWeight" Value="{Binding Source={x:Static material:Fonts.Caption}, Path=Weight}"/>
+        <Setter Property="TextElement.FontStyle" Value="{Binding Source={x:Static material:Fonts.Caption}, Path=Style}"/>
+        <Setter Property="TextElement.FontStretch" Value="{Binding Source={x:Static material:Fonts.Caption}, Path=Stretch}"/>
+    </Style>
+    
+    <Style x:Key="MaterialFlatButtonStyle" TargetType="ButtonBase">
+        <Setter Property="Height" Value="36"/>
+        <Setter Property="MinWidth" Value="64"/>
+        <Setter Property="Margin" Value="4"/>
+        <Setter Property="HorizontalAlignment" Value="Left"/>
+        <Setter Property="VerticalAlignment" Value="Top"/>
+        <Setter Property="material:Palette.Palette" Value="{StaticResource DefaultPalette}"/>
+        <Setter Property="Padding" Value="8,0,8,0"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="ButtonBase">
+                    <Grid >
+                        <local:Animator.Animator>
+                            <local:Animator>
+                                <local:AnimatorState>
+                                    <local:AnimatorState.Conditions>
+                                        <local:BindingCondition Binding="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=IsEnabled}" Value="{StaticResource BooleanFalse}"/>
+                                    </local:AnimatorState.Conditions>
+                                    <local:AnimatorState.Animations>
+                                        <local:ColorAnimation ObjectName="Background" To="{x:Static material:Palette.FlatButtonDisabledColorLight}" Path="(Rectangle.Fill).(SolidColorBrush.Color)"/>
+                                        <local:ColorAnimation ObjectName="Text" To="{x:Static material:Palette.HintAndDisabledColorItemsLight}" Path="(TextBlock.Foreground).(SolidColorBrush.Color)"/>
+                                    </local:AnimatorState.Animations>
+                                </local:AnimatorState>
+
+                                <local:AnimatorState>
+                                    <local:AnimatorState.Conditions>
+                                        <local:BindingCondition Binding="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=IsPressed}" Value="{StaticResource BooleanTrue}"/>
+                                    </local:AnimatorState.Conditions>
+                                    <local:AnimatorState.Animations>
+                                        <local:ColorAnimation ObjectName="Background" To="{x:Static material:Palette.FlatButtonPressedColorLight}" Path="(Rectangle.Fill).(SolidColorBrush.Color)"/>
+                                        <local:ColorAnimation ObjectName="Text" To="{Binding Path=(material:Palette.Palette).Colors[A700]}" Path="(TextBlock.Foreground).(SolidColorBrush.Color)"/>
+                                    </local:AnimatorState.Animations>
+                                </local:AnimatorState>
+
+                                <local:AnimatorState>
+                                    <local:AnimatorState.Conditions>
+                                        <local:BindingCondition Binding="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=IsMouseOver}" Value="{StaticResource BooleanTrue}"/>
+                                    </local:AnimatorState.Conditions>
+                                    <local:AnimatorState.Animations>
+                                        <local:ColorAnimation ObjectName="Background" To="{x:Static material:Palette.FlatButtonHoverColorLight}" Path="(Rectangle.Fill).(SolidColorBrush.Color)"/>
+                                        <local:ColorAnimation ObjectName="Text" To="{x:Static material:Palette.PrimaryColorItemsLight}" Path="(TextBlock.Foreground).(SolidColorBrush.Color)"/>
+                                    </local:AnimatorState.Animations>
+                                </local:AnimatorState>
+
+                                <local:AnimatorState>
+                                    <local:AnimatorState.Animations>
+                                        <local:ColorAnimation ObjectName="Background" To="{x:Static material:Palette.FlatButtonNormalColorLight}" Path="(Rectangle.Fill).(SolidColorBrush.Color)"/>
+                                        <local:ColorAnimation ObjectName="Text" To="{x:Static material:Palette.PrimaryColorItemsLight}" Path="(TextBlock.Foreground).(SolidColorBrush.Color)"/>
+                                    </local:AnimatorState.Animations>
+                                </local:AnimatorState>
+                            </local:Animator>
+                        </local:Animator.Animator>
+                        <Rectangle x:Name="Background" RadiusX="2" RadiusY="2">
+                            <Rectangle.Fill>
+                                <SolidColorBrush Color="Transparent"/>
+                            </Rectangle.Fill>
+                        </Rectangle>
+                        <ContentPresenter x:Name="Text"
+                                          Content="{TemplateBinding Content}"
+                                          ContentTemplate="{TemplateBinding ContentTemplate}"
+                                          ContentTemplateSelector="{TemplateBinding ContentTemplateSelector}"
+                                          Style="{StaticResource ButtonTextStyle}"
+                                          VerticalAlignment="Center"
+                                          HorizontalAlignment="Center"
+                                          Margin="{TemplateBinding Padding}">
+                            <TextBlock.Foreground>
+                                <SolidColorBrush Color="{x:Static material:Palette.PrimaryColorItemsLight}"/>
+                            </TextBlock.Foreground>
+                        </ContentPresenter>
+                        <!--<TextBlock x:Name="Text" 
+                                   Text="{TemplateBinding Content}"
+                                   Style="{StaticResource ButtonTextStyle}"
+                                   VerticalAlignment="Center"
+                                   HorizontalAlignment="Center"
+                                   Margin="{TemplateBinding Padding}">
+                            <TextBlock.Foreground>
+                                <SolidColorBrush Color="{x:Static material:Palette.PrimaryColorItemsLight}"/>
+                            </TextBlock.Foreground>
+                        </TextBlock>-->
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="MaterialIconFlatButtonStyle" TargetType="ButtonBase">
+        <Setter Property="Height" Value="32"/>
+        <Setter Property="Width" Value="32"/>
+        <Setter Property="Margin" Value="4"/>
+        <Setter Property="HorizontalAlignment" Value="Left"/>
+        <Setter Property="VerticalAlignment" Value="Top"/>
+        <Setter Property="material:Palette.Palette" Value="{StaticResource DefaultPalette}"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="ButtonBase">
+                    <ControlTemplate.Resources>
+                    </ControlTemplate.Resources>
+                    <Grid >
+                        <local:Animator.Animator>
+                            <local:Animator>
+                                <local:AnimatorState>
+                                    <local:AnimatorState.Conditions>
+                                        <local:BindingCondition Binding="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=IsEnabled}" Value="{StaticResource BooleanFalse}"/>
+                                    </local:AnimatorState.Conditions>
+                                    <local:AnimatorState.Animations>
+                                        <local:ColorAnimation ObjectName="Background" To="{x:Static material:Palette.FlatButtonDisabledColorLight}" Path="(Rectangle.Fill).(SolidColorBrush.Color)"/>
+                                        <local:ColorAnimation ObjectName="Text" To="{x:Static material:Palette.HintAndDisabledColorItemsLight}" Path="(Path.Fill).(SolidColorBrush.Color)"/>
+                                    </local:AnimatorState.Animations>
+                                </local:AnimatorState>
+
+                                <local:AnimatorState>
+                                    <local:AnimatorState.Conditions>
+                                        <local:BindingCondition Binding="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=IsPressed}" Value="{StaticResource BooleanTrue}"/>
+                                    </local:AnimatorState.Conditions>
+                                    <local:AnimatorState.Animations>
+                                        <local:ColorAnimation ObjectName="Background" To="{x:Static material:Palette.FlatButtonPressedColorLight}" Path="(Rectangle.Fill).(SolidColorBrush.Color)"/>
+                                        <local:ColorAnimation ObjectName="Text" To="{Binding Path=(material:Palette.Palette).Colors[A700]}" Path="(Path.Fill).(SolidColorBrush.Color)"/>
+                                    </local:AnimatorState.Animations>
+                                </local:AnimatorState>
+
+                                <local:AnimatorState>
+                                    <local:AnimatorState.Conditions>
+                                        <local:BindingCondition Binding="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=IsMouseOver}" Value="{StaticResource BooleanTrue}"/>
+                                    </local:AnimatorState.Conditions>
+                                    <local:AnimatorState.Animations>
+                                        <local:ColorAnimation ObjectName="Background" To="{x:Static material:Palette.FlatButtonHoverColorLight}" Path="(Rectangle.Fill).(SolidColorBrush.Color)"/>
+                                        <local:ColorAnimation ObjectName="Text" To="{x:Static material:Palette.SecondaryColorItemsLight}" Path="(Path.Fill).(SolidColorBrush.Color)"/>
+                                    </local:AnimatorState.Animations>
+                                </local:AnimatorState>
+
+                                <local:AnimatorState>
+                                    <local:AnimatorState.Animations>
+                                        <local:ColorAnimation ObjectName="Background" To="{x:Static material:Palette.FlatButtonNormalColorLight}" Path="(Rectangle.Fill).(SolidColorBrush.Color)"/>
+                                        <local:ColorAnimation ObjectName="Text" To="{x:Static material:Palette.SecondaryColorItemsLight}" Path="(Path.Fill).(SolidColorBrush.Color)"/>
+                                    </local:AnimatorState.Animations>
+                                </local:AnimatorState>
+                            </local:Animator>
+                        </local:Animator.Animator>
+                        <Ellipse x:Name="Background">
+                            <Ellipse.Fill>
+                                <SolidColorBrush Color="Transparent"/>
+                            </Ellipse.Fill>
+                        </Ellipse>
+                        <!--<Viewbox Margin="{TemplateBinding Padding}">-->
+                            <Canvas Width="24" Height="24" HorizontalAlignment="Center" VerticalAlignment="Center">
+                                <Path x:Name="Text" Data="{TemplateBinding Content}"  >
+                                    <Path.Fill>
+                                    <SolidColorBrush Color="{x:Static material:Palette.SecondaryColorItemsLight}"/>
+                                    </Path.Fill>
+                                </Path>
+                            </Canvas>
+                        <!--</Viewbox>-->
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    
+    <Style x:Key="MaterialFlatToggleButtonStyle" TargetType="ToggleButton">
+        <Setter Property="Height" Value="36"/>
+        <Setter Property="MinWidth" Value="64"/>
+        <Setter Property="Margin" Value="4"/>
+        <Setter Property="HorizontalAlignment" Value="Left"/>
+        <Setter Property="VerticalAlignment" Value="Top"/>
+        <Setter Property="material:Palette.Palette" Value="{StaticResource DefaultPalette}"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="ToggleButton">
+                    <Grid>
+                        <local:Animator.Animator>
+                            <local:Animator>
+                                <local:AnimatorState>
+                                    <local:AnimatorState.Conditions>
+                                        <local:BindingCondition Binding="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=IsEnabled}" Value="{StaticResource BooleanFalse}"/>
+                                    </local:AnimatorState.Conditions>
+                                    <local:AnimatorState.Animations>
+                                        <local:ColorAnimation ObjectName="Background" To="{x:Static material:Palette.FlatButtonDisabledColorLight}" Path="(Rectangle.Fill).(SolidColorBrush.Color)"/>
+                                        <local:ColorAnimation ObjectName="Text" To="{x:Static material:Palette.HintAndDisabledColorItemsLight}" Path="(TextBlock.Foreground).(SolidColorBrush.Color)"/>
+                                    </local:AnimatorState.Animations>
+                                </local:AnimatorState>
+
+                                <local:AnimatorState>
+                                    <local:AnimatorState.Conditions>
+                                        <local:BindingCondition Binding="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=IsPressed}" Value="{StaticResource BooleanTrue}"/>
+                                    </local:AnimatorState.Conditions>
+                                    <local:AnimatorState.Animations>
+                                        <local:ColorAnimation ObjectName="Background" To="{x:Static material:Palette.FlatButtonPressedColorLight}" Path="(Rectangle.Fill).(SolidColorBrush.Color)"/>
+                                    </local:AnimatorState.Animations>
+                                </local:AnimatorState>
+
+                                <local:AnimatorState>
+                                    <local:AnimatorState.Conditions>
+                                        <local:BindingCondition Binding="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=IsMouseOver}" Value="{StaticResource BooleanTrue}"/>
+                                    </local:AnimatorState.Conditions>
+                                    <local:AnimatorState.Animations>
+                                        <local:ColorAnimation ObjectName="Background" To="{x:Static material:Palette.FlatButtonHoverColorLight}" Path="(Rectangle.Fill).(SolidColorBrush.Color)"/>
+                                    </local:AnimatorState.Animations>
+                                </local:AnimatorState>
+
+                                <local:AnimatorState>
+                                    <local:AnimatorState.Animations>
+                                        <local:ColorAnimation ObjectName="Background" To="{x:Static material:Palette.FlatButtonNormalColorLight}" Path="(Rectangle.Fill).(SolidColorBrush.Color)"/>
+                                    </local:AnimatorState.Animations>
+                                </local:AnimatorState>
+
+                                <local:AnimatorState Group="TextAnimations">
+                                    <local:AnimatorState.Conditions>
+                                        <local:BindingCondition Binding="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=IsChecked}" Value="{StaticResource BooleanTrue}"/>
+                                    </local:AnimatorState.Conditions>
+                                    <local:AnimatorState.Animations>
+                                        <local:ColorAnimation ObjectName="Text" To="{Binding Path=(material:Palette.Palette).Colors[A700]}" Path="(TextBlock.Foreground).(SolidColorBrush.Color)"/>
+                                    </local:AnimatorState.Animations>
+                                </local:AnimatorState>
+                                
+                                <local:AnimatorState Group="TextAnimations">
+                                    <local:AnimatorState.Conditions>
+                                        <local:BindingCondition Binding="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=IsChecked}" Value="{StaticResource BooleanFalse}"/>
+                                    </local:AnimatorState.Conditions>
+                                    <local:AnimatorState.Animations>
+                                        <local:ColorAnimation ObjectName="Text" To="{x:Static material:Palette.PrimaryColorItemsLight}" Path="(TextBlock.Foreground).(SolidColorBrush.Color)"/>
+                                    </local:AnimatorState.Animations>
+                                </local:AnimatorState>
+
+                            </local:Animator>
+                        </local:Animator.Animator>
+                        <Rectangle x:Name="Background" RadiusX="2" RadiusY="2">
+                            <Rectangle.Fill>
+                                <SolidColorBrush Color="Transparent"/>
+                            </Rectangle.Fill>
+                        </Rectangle>
+                        <TextBlock x:Name="Text" 
+                                   Text="{TemplateBinding Content}"
+                                   Style="{StaticResource ButtonTextStyle}"
+                                   VerticalAlignment="Center"
+                                   HorizontalAlignment="Center"
+                                   Margin="8,0,8,0">
+                            <TextBlock.Foreground>
+                                <SolidColorBrush Color="{x:Static material:Palette.PrimaryColorItemsLight}"/>
+                            </TextBlock.Foreground>
+                        </TextBlock>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style x:Key="MaterialFlatIconToggleButtonStyle" TargetType="ToggleButton">
+        <Setter Property="Height" Value="32"/>
+        <Setter Property="Width" Value="32"/>
+        <Setter Property="Margin" Value="4"/>
+        <Setter Property="HorizontalAlignment" Value="Left"/>
+        <Setter Property="VerticalAlignment" Value="Top"/>
+        <Setter Property="material:Palette.Palette" Value="{StaticResource DefaultPalette}"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="ToggleButton">
+                    <Grid>
+                        <local:Animator.Animator>
+                            <local:Animator>
+                                <local:AnimatorState>
+                                    <local:AnimatorState.Conditions>
+                                        <local:BindingCondition Binding="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=IsEnabled}" Value="{StaticResource BooleanFalse}"/>
+                                    </local:AnimatorState.Conditions>
+                                    <local:AnimatorState.Animations>
+                                        <local:ColorAnimation ObjectName="Background" To="{x:Static material:Palette.FlatButtonDisabledColorLight}" Path="(Rectangle.Fill).(SolidColorBrush.Color)"/>
+                                        <local:ColorAnimation ObjectName="Text" To="{x:Static material:Palette.HintAndDisabledColorItemsLight}" Path="(Path.Fill).(SolidColorBrush.Color)"/>
+                                    </local:AnimatorState.Animations>
+                                </local:AnimatorState>
+
+                                <local:AnimatorState>
+                                    <local:AnimatorState.Conditions>
+                                        <local:BindingCondition Binding="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=IsPressed}" Value="{StaticResource BooleanTrue}"/>
+                                    </local:AnimatorState.Conditions>
+                                    <local:AnimatorState.Animations>
+                                        <local:ColorAnimation ObjectName="Background" To="{x:Static material:Palette.FlatButtonPressedColorLight}" Path="(Rectangle.Fill).(SolidColorBrush.Color)"/>
+                                    </local:AnimatorState.Animations>
+                                </local:AnimatorState>
+
+                                <local:AnimatorState>
+                                    <local:AnimatorState.Conditions>
+                                        <local:BindingCondition Binding="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=IsMouseOver}" Value="{StaticResource BooleanTrue}"/>
+                                    </local:AnimatorState.Conditions>
+                                    <local:AnimatorState.Animations>
+                                        <local:ColorAnimation ObjectName="Background" To="{x:Static material:Palette.FlatButtonHoverColorLight}" Path="(Rectangle.Fill).(SolidColorBrush.Color)"/>
+                                    </local:AnimatorState.Animations>
+                                </local:AnimatorState>
+
+                                <local:AnimatorState>
+                                    <local:AnimatorState.Animations>
+                                        <local:ColorAnimation ObjectName="Background" To="{x:Static material:Palette.FlatButtonNormalColorLight}" Path="(Rectangle.Fill).(SolidColorBrush.Color)"/>
+                                    </local:AnimatorState.Animations>
+                                </local:AnimatorState>
+
+                                <local:AnimatorState Group="TextAnimations">
+                                    <local:AnimatorState.Conditions>
+                                        <local:BindingCondition Binding="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=IsChecked}" Value="{StaticResource BooleanTrue}"/>
+                                    </local:AnimatorState.Conditions>
+                                    <local:AnimatorState.Animations>
+                                        <local:ColorAnimation ObjectName="Text" To="{Binding Path=(material:Palette.Palette).Colors[A700]}" Path="(Path.Fill).(SolidColorBrush.Color)"/>
+                                    </local:AnimatorState.Animations>
+                                </local:AnimatorState>
+
+                                <local:AnimatorState Group="TextAnimations">
+                                    <local:AnimatorState.Conditions>
+                                        <local:BindingCondition Binding="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=IsChecked}" Value="{StaticResource BooleanFalse}"/>
+                                    </local:AnimatorState.Conditions>
+                                    <local:AnimatorState.Animations>
+                                        <local:ColorAnimation ObjectName="Text" To="{x:Static material:Palette.SecondaryColorItemsLight}" Path="(Path.Fill).(SolidColorBrush.Color)"/>
+                                    </local:AnimatorState.Animations>
+                                </local:AnimatorState>
+
+                            </local:Animator>
+                        </local:Animator.Animator>
+                        <Ellipse x:Name="Background">
+                            <Ellipse.Fill>
+                                <SolidColorBrush Color="Transparent"/>
+                            </Ellipse.Fill>
+                        </Ellipse>
+                        <!--<Viewbox Margin="{TemplateBinding Padding}">-->
+                        <Canvas Width="24" Height="24" HorizontalAlignment="Center" VerticalAlignment="Center">
+                            <Path x:Name="Text" Data="{TemplateBinding Content}"  >
+                                <Path.Fill>
+                                    <SolidColorBrush Color="{x:Static material:Palette.SecondaryColorItemsLight}"/>
+                                </Path.Fill>
+                            </Path>
+                        </Canvas>
+                        <!--</Viewbox>-->
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="MaterialRaisedColorButtonStyle" TargetType="ButtonBase">
+        <Setter Property="Height" Value="36"/>
+        <Setter Property="MinWidth" Value="64"/>
+        <Setter Property="Margin" Value="4"/>
+        <Setter Property="HorizontalAlignment" Value="Left"/>
+        <Setter Property="VerticalAlignment" Value="Top"/>
+        <Setter Property="material:Palette.Palette" Value="{StaticResource DefaultPalette}"/>
+        <Setter Property="Padding" Value="8,0,8,0"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="ButtonBase">
+                    <Grid >
+                        <local:Animator.Animator>
+                            <local:Animator>
+                                <local:AnimatorState>
+                                    <local:AnimatorState.Conditions>
+                                        <local:BindingCondition Binding="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=IsEnabled}" Value="{StaticResource BooleanFalse}"/>
+                                    </local:AnimatorState.Conditions>
+                                    <local:AnimatorState.Animations>
+                                        <local:ColorAnimation ObjectName="Background" To="{x:Static material:Palette.DividersColorItemsLight}" Path="(Rectangle.Fill).(SolidColorBrush.Color)"/>
+                                        <local:ColorAnimation ObjectName="Text" To="{x:Static material:Palette.HintAndDisabledColorItemsLight}" Path="(TextBlock.Foreground).(SolidColorBrush.Color)"/>
+                                        <local:ShadowAnimation ObjectName="Background" To="{local:Shadow 0}" Path="(Rectangle.Effect)"/>
+                                    </local:AnimatorState.Animations>
+                                </local:AnimatorState>
+
+                                <local:AnimatorState>
+                                    <local:AnimatorState.Conditions>
+                                        <local:BindingCondition Binding="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=IsPressed}" Value="{StaticResource BooleanTrue}"/>
+                                    </local:AnimatorState.Conditions>
+                                    <local:AnimatorState.Animations>
+                                        <local:ColorAnimation ObjectName="Background" To="{Binding Path=(material:Palette.Palette).Colors[700]}" Path="(Rectangle.Fill).(SolidColorBrush.Color)"/>
+                                        <local:ColorAnimation ObjectName="Text" To="{x:Static material:Palette.PrimaryColorItemsDark}" Path="(TextBlock.Foreground).(SolidColorBrush.Color)"/>
+                                        <local:ShadowAnimation ObjectName="Background" To="{local:Shadow 3}" Path="(Rectangle.Effect)"/>
+                                    </local:AnimatorState.Animations>
+                                </local:AnimatorState>
+
+                                <local:AnimatorState>
+                                    <local:AnimatorState.Conditions>
+                                        <local:BindingCondition Binding="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=IsMouseOver}" Value="{StaticResource BooleanTrue}"/>
+                                    </local:AnimatorState.Conditions>
+                                    <local:AnimatorState.Animations>
+                                        <local:ColorAnimation ObjectName="Background" To="{Binding Path=(material:Palette.Palette).Colors[600]}" Path="(Rectangle.Fill).(SolidColorBrush.Color)"/>
+                                        <local:ColorAnimation ObjectName="Text" To="{x:Static material:Palette.PrimaryColorItemsDark}" Path="(TextBlock.Foreground).(SolidColorBrush.Color)"/>
+                                        <local:ShadowAnimation ObjectName="Background" To="{local:Shadow 1}" Path="(Rectangle.Effect)"/>
+                                    </local:AnimatorState.Animations>
+                                </local:AnimatorState>
+
+                                <local:AnimatorState>
+                                    <local:AnimatorState.Animations>
+                                        <local:ColorAnimation ObjectName="Background" To="{Binding Path=(material:Palette.Palette).Colors[500]}" Path="(Rectangle.Fill).(SolidColorBrush.Color)"/>
+                                        <local:ColorAnimation ObjectName="Text" To="{x:Static material:Palette.PrimaryColorItemsDark}" Path="(TextBlock.Foreground).(SolidColorBrush.Color)"/>
+                                        <local:ShadowAnimation ObjectName="Background" To="{local:Shadow 1}" Path="(Rectangle.Effect)"/>
+                                    </local:AnimatorState.Animations>
+                                </local:AnimatorState>
+                            </local:Animator>
+                        </local:Animator.Animator>
+                        <Rectangle x:Name="Background" RadiusX="2" RadiusY="2" Effect="{local:Shadow Level=1}">
+                            <Rectangle.Fill>
+                                <SolidColorBrush Color="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=(material:Palette.Palette).Colors[500]}"/>
+                            </Rectangle.Fill>
+                        </Rectangle>
+                        <ContentPresenter x:Name="Text"
+                                          Content="{TemplateBinding Content}"
+                                          ContentTemplate="{TemplateBinding ContentTemplate}"
+                                          ContentTemplateSelector="{TemplateBinding ContentTemplateSelector}"
+                                          Style="{StaticResource ButtonTextStyle}"
+                                          VerticalAlignment="Center"
+                                          HorizontalAlignment="Center"
+                                          Margin="{TemplateBinding Padding}">
+                            <TextBlock.Foreground>
+                                <SolidColorBrush Color="{x:Static material:Palette.PrimaryColorItemsDark}"/>
+                            </TextBlock.Foreground>
+                        </ContentPresenter>
+                        <!--<TextBlock x:Name="Text" 
+                                   Text="{TemplateBinding Content}"
+                                   Style="{StaticResource ButtonTextStyle}"
+                                   VerticalAlignment="Center"
+                                   HorizontalAlignment="Center"
+                                   Margin="{TemplateBinding Padding}">
+                            <TextBlock.Foreground>
+                                <SolidColorBrush Color="{x:Static material:Palette.PrimaryColorItemsLight}"/>
+                            </TextBlock.Foreground>
+                        </TextBlock>-->
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="MaterialGroupBoxStyle" TargetType="GroupBox">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="GroupBox">
+                    <DockPanel LastChildFill="True">
+                        <Border Height="36" DockPanel.Dock="Top">
+                            <ContentPresenter Content="{TemplateBinding Header}"
+                                              ContentTemplate="{TemplateBinding HeaderTemplate}"
+                                              ContentTemplateSelector="{TemplateBinding HeaderTemplateSelector}"
+                                              ContentStringFormat="{TemplateBinding HeaderStringFormat}"
+                                              TextBlock.FontSize="14"
+                                              TextBlock.FontWeight="Medium"
+                                              HorizontalAlignment="Left"
+                                              VerticalAlignment="Center"
+                                              Margin="16,0,0,0"
+                                              Style="{StaticResource Body2TextStyle}"/>
+                        </Border>
+                        <Border>
+                            <ContentPresenter ContentSource="Content"/>
+                        </Border>
+                    </DockPanel>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+</ResourceDictionary>

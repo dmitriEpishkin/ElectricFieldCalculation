@@ -1,0 +1,9 @@
+TimeSeriesPath         = C:\Users\User\Desktop\эксперименты\Расчёт электрического поля\REAL_data\IVAdata.txt
+ImpedancePath          = C:\Users\User\Desktop\эксперименты\Расчёт электрического поля\B42_RR.FTF
+OutputTimeSeriesPath   = C:\Users\User\Desktop\эксперименты\Расчёт электрического поля\IVA_generated.txt
+OutputPowerSpectraPath = C:\Users\User\Desktop\эксперименты\Расчёт электрического поля\IVA_powerSpectra.csv
+WindowForGenerating    = 2048
+StepForGenerating      = 1
+PowerSpectraWindow     = 2048
+
+

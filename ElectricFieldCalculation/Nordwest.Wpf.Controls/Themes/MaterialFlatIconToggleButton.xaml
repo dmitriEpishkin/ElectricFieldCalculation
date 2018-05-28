@@ -1,0 +1,116 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:controls="clr-namespace:Nordwest.Wpf.Controls">
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="/Nordwest.Wpf.Controls;component/Themes/Material.xaml"/>
+        <ResourceDictionary Source="/Nordwest.Wpf.Controls;component/Themes/Common.xaml"/>
+    </ResourceDictionary.MergedDictionaries>
+
+    <Style TargetType="{x:Type controls:MaterialFlatIconToggleButton}">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type controls:MaterialFlatIconToggleButton}">
+                    <Border>
+                        <VisualStateManager.VisualStateGroups>
+                            <VisualStateGroup x:Name="CommonStates">
+                                <VisualState x:Name="Normal">
+                                    <Storyboard>
+                                        <ColorAnimation Storyboard.TargetName="RectangleBackground" Storyboard.TargetProperty="Fill.Color"
+                                                        To="{StaticResource NormalFlatButtonBackground}" Duration="0:0:0.2"/>
+                                        <ColorAnimation Storyboard.TargetName="EllipseBackground" Storyboard.TargetProperty="Fill.Color"
+                                                        To="{StaticResource NormalFlatButtonBackground}" Duration="0:0:0.2"/>
+                                    </Storyboard>
+                                </VisualState>
+                                <VisualState x:Name="MouseOver">
+                                    <Storyboard>
+                                        <ColorAnimation Storyboard.TargetName="RectangleBackground" Storyboard.TargetProperty="Fill.Color"
+                                                        To="{StaticResource HoverFlatButtonBackground}" Duration="0:0:0.2"/>
+                                        <ColorAnimation Storyboard.TargetName="EllipseBackground" Storyboard.TargetProperty="Fill.Color"
+                                                        To="{StaticResource HoverFlatButtonBackground}" Duration="0:0:0.2"/>
+                                    </Storyboard>
+                                </VisualState>
+                                <VisualState x:Name="Pressed">
+                                    <Storyboard>
+                                        <ColorAnimation Storyboard.TargetName="RectangleBackground" Storyboard.TargetProperty="Fill.Color"
+                                                        To="{StaticResource PressedFlatButtonBackground}" Duration="0:0:0.2"/>
+                                        <ColorAnimation Storyboard.TargetName="EllipseBackground" Storyboard.TargetProperty="Fill.Color"
+                                                        To="{StaticResource PressedFlatButtonBackground}" Duration="0:0:0.2"/>
+                                    </Storyboard>
+                                </VisualState>
+                                <VisualState x:Name="Disabled">
+                                    <Storyboard>
+                                        <ColorAnimation Storyboard.TargetName="RectangleBackground" Storyboard.TargetProperty="Fill.Color"
+                                                        To="{StaticResource NormalFlatButtonBackground}" Duration="0:0:0.2"/>
+                                        <ColorAnimation Storyboard.TargetName="EllipseBackground" Storyboard.TargetProperty="Fill.Color"
+                                                        To="{StaticResource NormalFlatButtonBackground}" Duration="0:0:0.2"/>
+                                    </Storyboard>
+                                </VisualState>
+                            </VisualStateGroup>
+                        </VisualStateManager.VisualStateGroups>
+                        <Grid>
+                            <Rectangle x:Name="RectangleBackground" RadiusX="2" RadiusY="2">
+                                <Rectangle.Fill>
+                                    <SolidColorBrush Color="{StaticResource NormalFlatButtonBackground}"/>
+                                </Rectangle.Fill>
+                                <Rectangle.Visibility>
+                                    <Binding RelativeSource="{RelativeSource TemplatedParent}" 
+                                             Path="IsIcon"
+                                             UpdateSourceTrigger="PropertyChanged"
+                                             Mode="OneWay"
+                                             Converter="{x:Static controls:MaterialFlatIconToggleButton.InvertableBooleanToVisibilityConverter}"
+                                             ConverterParameter="{StaticResource BooleanTrue}" />
+                                </Rectangle.Visibility>
+                            </Rectangle>
+                            <Ellipse x:Name="EllipseBackground" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                                <Ellipse.Visibility>
+                                    <Binding RelativeSource="{RelativeSource TemplatedParent}" 
+                                             Path="IsIcon"
+                                             UpdateSourceTrigger="PropertyChanged"
+                                             Mode="OneWay"
+                                             Converter="{x:Static controls:MaterialFlatIconToggleButton.InvertableBooleanToVisibilityConverter}" 
+                                             ConverterParameter="{StaticResource BooleanFalse}"/>
+                                </Ellipse.Visibility>
+                                <Ellipse.Fill>
+                                    <SolidColorBrush Color="{StaticResource NormalFlatButtonBackground}"/>
+                                </Ellipse.Fill>
+                            </Ellipse>
+                            <Viewbox Width="{TemplateBinding IconWidth}"
+                                        Height="{TemplateBinding IconHeight}"
+                                        HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                        VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                                        Visibility="{Binding ElementName=EllipseBackground, Path=Visibility}">
+                                <Path x:Name="Path" Data="{TemplateBinding Icon}"
+                                    Width="{TemplateBinding IconCanvasWidth}"
+                                    Height="{TemplateBinding IconCanvasHeight}">
+                                    <Path.Fill>
+                                        <SolidColorBrush Color="Black" />
+                                    </Path.Fill>
+                                </Path>
+                            </Viewbox>
+                            <ContentControl x:Name="ContentControl" 
+                                            Content="{TemplateBinding Content}"
+                                            ContentTemplate="{TemplateBinding ContentTemplate}"
+                                            ContentTemplateSelector="{TemplateBinding ContentTemplateSelector}"
+                                            HorizontalContentAlignment="Center"
+                                            VerticalContentAlignment="Center"
+                                            HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                            VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                                            Foreground="{Binding ElementName=Path, Path=Fill}"
+                                            Visibility="{Binding ElementName=RectangleBackground, Path=Visibility}">
+                            </ContentControl>
+                        </Grid>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="VerticalAlignment" Value="Stretch" />
+        <Setter Property="HorizontalAlignment" Value="Stretch" />
+        <Setter Property="VerticalContentAlignment" Value="Center" />
+        <Setter Property="HorizontalContentAlignment" Value="Center" />
+        <Setter Property="Background" Value="Transparent" />
+        <Setter Property="IsIcon" Value="False" />
+        <Setter Property="CheckedColor" Value="{StaticResource PrimaryColor}" />
+        <Setter Property="NormalColor" Value="{StaticResource EnabledIconColor}" />
+        <Setter Property="DisabledColor" Value="{StaticResource DisabledIconColor}" />
+    </Style>
+</ResourceDictionary>

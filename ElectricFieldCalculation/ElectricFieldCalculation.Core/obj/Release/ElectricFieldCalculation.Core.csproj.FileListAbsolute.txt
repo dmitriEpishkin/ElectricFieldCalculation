@@ -1,0 +1,13 @@
+C:\Users\User\Documents\Visual Studio 2015\Projects\ElectricFieldCalculation\ElectricFieldCalculation.Core\bin\Release\ElectricFieldCalculation.Core.dll
+C:\Users\User\Documents\Visual Studio 2015\Projects\ElectricFieldCalculation\ElectricFieldCalculation.Core\bin\Release\ElectricFieldCalculation.Core.pdb
+C:\Users\User\Documents\Visual Studio 2015\Projects\ElectricFieldCalculation\ElectricFieldCalculation.Core\obj\Release\ElectricFieldCalculation.Core.csprojResolveAssemblyReference.cache
+C:\Users\User\Documents\Visual Studio 2015\Projects\ElectricFieldCalculation\ElectricFieldCalculation.Core\obj\Release\ElectricFieldCalculation.Core.dll
+C:\Users\User\Documents\Visual Studio 2015\Projects\ElectricFieldCalculation\ElectricFieldCalculation.Core\obj\Release\ElectricFieldCalculation.Core.pdb
+D:\VisualStudio\Projects\ElectricFieldCalculation\ElectricFieldCalculation.Core\bin\Release\ElectricFieldCalculation.Core.dll
+D:\VisualStudio\Projects\ElectricFieldCalculation\ElectricFieldCalculation.Core\bin\Release\ElectricFieldCalculation.Core.pdb
+D:\VisualStudio\Projects\ElectricFieldCalculation\ElectricFieldCalculation.Core\bin\Release\WpfApplicationFramework.dll
+D:\VisualStudio\Projects\ElectricFieldCalculation\ElectricFieldCalculation.Core\bin\Release\WpfApplicationFramework.pdb
+D:\VisualStudio\Projects\ElectricFieldCalculation\ElectricFieldCalculation.Core\bin\Release\WpfApplicationFramework.xml
+D:\VisualStudio\Projects\ElectricFieldCalculation\ElectricFieldCalculation.Core\obj\Release\ElectricFieldCalculation.Core.csprojResolveAssemblyReference.cache
+D:\VisualStudio\Projects\ElectricFieldCalculation\ElectricFieldCalculation.Core\obj\Release\ElectricFieldCalculation.Core.dll
+D:\VisualStudio\Projects\ElectricFieldCalculation\ElectricFieldCalculation.Core\obj\Release\ElectricFieldCalculation.Core.pdb

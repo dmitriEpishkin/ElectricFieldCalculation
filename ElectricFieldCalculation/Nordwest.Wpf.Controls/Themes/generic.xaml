@@ -1,0 +1,15 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                    xmlns:d="http://schemas.microsoft.com/expression/blend/2008" mc:Ignorable="d">
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="/Nordwest.Wpf.Controls;component/Themes/Chart.xaml"/>
+        <ResourceDictionary Source="/Nordwest.Wpf.Controls;component/Themes/ExpandersPanel.xaml"/>
+        <ResourceDictionary Source="/Nordwest.Wpf.Controls;component/Themes/UpDownControl.xaml"/>
+        <ResourceDictionary Source="/Nordwest.Wpf.Controls;component/Themes/PopupButton.xaml"/>
+        <ResourceDictionary Source="/Nordwest.Wpf.Controls;component/Themes/MaterialExpander.xaml"/>
+        <ResourceDictionary Source="/Nordwest.Wpf.Controls;component/Themes/MaterialFlatIconToggleButton.xaml"/>
+        <ResourceDictionary Source="/Nordwest.Wpf.Controls;component/Themes/MaterialTabControl.xaml"/>
+        <ResourceDictionary Source="/Nordwest.Wpf.Controls;component/Themes/MaterialOverlayControl.xaml"/>
+    </ResourceDictionary.MergedDictionaries>
+</ResourceDictionary>
