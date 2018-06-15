@@ -1,24 +1,24 @@
 ﻿
-using SynteticData.TimeSeries;
+using System;
+using System.Collections.Generic;
 using System.ComponentModel;
+using System.Linq;
+using ElectricFieldCalculation.Core.Data;
 
 namespace SynteticData.Data {
+
     public class SiteData : INotifyPropertyChanged {
 
         private string _name;
 
-        private TimeSeriesDouble _gic;
-
-        private TimeSeriesDouble _ex;
-        private TimeSeriesDouble _ey;
-        private TimeSeriesDouble _hx;
-        private TimeSeriesDouble _hy;
-        private TimeSeriesDouble _hz;
-
-        private TimeSeriesDouble _dHx;
-        private TimeSeriesDouble _dHy;
-
         private TensorCurve _z;
+
+        private double _angleE;
+        private double _angleH;
+
+        public List<ComponentData> GetAllData() {
+            return new List<ComponentData>(new [] {Ex, Ey, Hx, Hy, Dhx, Dhy, Gic}).FindAll(t => t.Ts != null);
+        }
 
         public string Name {
             get { return _name; }
@@ -29,97 +29,42 @@ namespace SynteticData.Data {
                 }
             }
         }
-
-        public TimeSeriesDouble Gic {
-            get { return _gic; }
-            set {
-                if (_gic != value)
-                {
-                    _gic = value;
-                    OnPropertyChanged(nameof(Gic));
-                }
-            }
-        }
-
-        public TimeSeriesDouble Ex {
-            get { return _ex; }
-            set {
-                if (_ex != value) {
-                    _ex = value;
-                    OnPropertyChanged(nameof(Ex));
-                }
-            }
-        }
-
-        public TimeSeriesDouble Ey {
-            get { return _ey; }
-            set {
-                if (_ey != value) {
-                    _ey = value;
-                    OnPropertyChanged(nameof(Ey));
-                }
-            }
-        }
-
-        public TimeSeriesDouble Hx {
-            get { return _hx; }
-            set {
-                if (_hx != value) {
-                    _hx = value;
-                    OnPropertyChanged(nameof(Hx));
-                }
-            }
-        }
-
-        public TimeSeriesDouble Hy {
-            get { return _hy; }
-            set {
-                if (_hy != value) {
-                    _hy = value;
-                    OnPropertyChanged(nameof(Hy));
-                }
-            }
-        }
-
-        public TimeSeriesDouble Hz {
-            get { return _hz; }
-            set {
-                if (_hz != value)
-                {
-                    _hz = value;
-                    OnPropertyChanged(nameof(Hz));
-                }
-            }
-        }
-
-        public TimeSeriesDouble Dhx {
-            get { return _dHx; }
-            set {
-                if (_dHx != value)
-                {
-                    _dHx = value;
-                    OnPropertyChanged(nameof(Dhx));
-                }
-            }
-        }
-
-        public TimeSeriesDouble Dhy {
-            get { return _dHy; }
-            set {
-                if (_dHy != value)
-                {
-                    _dHy = value;
-                    OnPropertyChanged(nameof(Dhy));
-                }
-            }
-        }
-
+        
         public TensorCurve Z {
             get { return _z; }
             set {
                 if (_z != value) {
                     _z = value;
                     OnPropertyChanged(nameof(Z));
+                }
+            }
+        }
+
+        public ComponentData Gic { get; } = new ComponentData();
+        public ComponentData Ex { get; } = new ComponentData();
+        public ComponentData Ey { get; } = new ComponentData();
+        public ComponentData Hx { get; } = new ComponentData();
+        public ComponentData Hy { get; } = new ComponentData();
+        public ComponentData Hz { get; } = new ComponentData();
+        public ComponentData Dhx { get; } = new ComponentData();
+        public ComponentData Dhy { get; } = new ComponentData();
+        
+        public double AngleE {
+            get { return _angleE; }
+            set {
+                if (_angleE != value) {
+                    _angleE = value;
+                    OnPropertyChanged(nameof(AngleE));
+                }
+            }
+        }
+
+        public double AngleH {
+            get { return _angleH; }
+            set {
+                if (_angleH != value) {
+                    _angleH = value;
+                    OnPropertyChanged(nameof(AngleH));
                 }
             }
         }

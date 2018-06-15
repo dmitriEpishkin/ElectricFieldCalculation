@@ -44,10 +44,13 @@ namespace Nordwest.Wpf.Controls.Chart
             if (Points.Count == 0)
                 return Rect.Empty;
 
-            var x = Points.Where(p => !double.IsNaN(p.X)).Min(p => p.X);
-            var y = Points.Where(p => !double.IsNaN(p.Y)).Min(p => p.Y);
-            var w = Points.Where(p => !double.IsNaN(p.X)).Max(p => p.X) - x;
-            var h = Points.Where(p => !double.IsNaN(p.Y)).Max(p => p.Y) - y;
+            var px = Points.Where(p => !double.IsNaN(p.X));
+            var py = Points.Where(p => !double.IsNaN(p.Y));
+
+            var x = px.Any() ? px.Min(p => p.X) : 1;
+            var y = py.Any() ? py.Min(p => p.Y) : 1;
+            var w = (px.Any() ? px.Max(p => p.X) : 10) - x;
+            var h = (py.Any() ? py.Max(p => p.Y) : 10) - y;
 
             return _getBoundsRect.Invoke(new Rect(x, y, w, h));
         }

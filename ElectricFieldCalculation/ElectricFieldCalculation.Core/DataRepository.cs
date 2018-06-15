@@ -64,28 +64,28 @@ namespace ElectricFieldCalculation.Core
                     case FieldComponent.Unckown:
                         throw new Exception("неизвестная компонента");
                     case FieldComponent.Gic:
-                        e.Gic = d.Value;
+                        e.Gic.Ts = d.Value;
                         break;
                     case FieldComponent.Ex:
-                        e.Ex = d.Value;
+                        e.Ex.Ts = d.Value;
                         break;
                     case FieldComponent.Ey:
-                        e.Ey = d.Value;
+                        e.Ey.Ts = d.Value;
                         break;
                     case FieldComponent.Hx:
-                        e.Hx = d.Value;
+                        e.Hx.Ts = d.Value;
                         break;
                     case FieldComponent.Hy:
-                        e.Hy = d.Value;
+                        e.Hy.Ts = d.Value;
                         break;
                     case FieldComponent.Hz:
-                        e.Hz = d.Value;
+                        e.Hz.Ts = d.Value;
                         break;
                     case FieldComponent.Dx:
-                        e.Dhx = d.Value;
+                        e.Dhx.Ts = d.Value;
                         break;
                     case FieldComponent.Dy:
-                        e.Dhy = d.Value;
+                        e.Dhy.Ts = d.Value;
                         break;
                     default:
                         throw new ArgumentOutOfRangeException();
@@ -99,16 +99,38 @@ namespace ElectricFieldCalculation.Core
 
             foreach (var d in All) {
                 
-                if (d.Ex != null)
-                    res.Add(new ChannelInfo(d.Name, FieldComponent.Ex), d.Ex);
-                if (d.Ey != null)
-                    res.Add(new ChannelInfo(d.Name, FieldComponent.Ey), d.Ey);
-                if (d.Hx != null)
-                    res.Add(new ChannelInfo(d.Name, FieldComponent.Hx), d.Hx);
-                if (d.Hy != null)
-                    res.Add(new ChannelInfo(d.Name, FieldComponent.Hy), d.Hy);
-                if (d.Hz != null)
-                    res.Add(new ChannelInfo(d.Name, FieldComponent.Hz), d.Hz);
+                if (d.Ex.Ts != null)
+                    res.Add(new ChannelInfo(d.Name, FieldComponent.Ex), d.Ex.Ts);
+                if (d.Ey.Ts != null)
+                    res.Add(new ChannelInfo(d.Name, FieldComponent.Ey), d.Ey.Ts);
+                if (d.Hx.Ts != null)
+                    res.Add(new ChannelInfo(d.Name, FieldComponent.Hx), d.Hx.Ts);
+                if (d.Hy.Ts != null)
+                    res.Add(new ChannelInfo(d.Name, FieldComponent.Hy), d.Hy.Ts);
+                if (d.Hz.Ts != null)
+                    res.Add(new ChannelInfo(d.Name, FieldComponent.Hz), d.Hz.Ts);
+            }
+
+            return res;
+        }
+
+        public Dictionary<ChannelInfo, PowerSpectra> GetSpectraDictionary() {
+            var res = new Dictionary<ChannelInfo, PowerSpectra>();
+
+            foreach (var d in All) {
+
+                if (d.Ex.Spectra != null)
+                    res.Add(new ChannelInfo(d.Name, FieldComponent.Ex), d.Ex.Spectra);
+                if (d.Ey.Spectra != null)
+                    res.Add(new ChannelInfo(d.Name, FieldComponent.Ey), d.Ey.Spectra);
+                if (d.Hx.Spectra != null)
+                    res.Add(new ChannelInfo(d.Name, FieldComponent.Hx), d.Hx.Spectra);
+                if (d.Hy.Spectra != null)
+                    res.Add(new ChannelInfo(d.Name, FieldComponent.Hy), d.Hy.Spectra);
+                if (d.Hz.Spectra != null)
+                    res.Add(new ChannelInfo(d.Name, FieldComponent.Hz), d.Hz.Spectra);
+                if (d.Gic.Spectra != null)
+                    res.Add(new ChannelInfo(d.Name, FieldComponent.Gic), d.Gic.Spectra);
             }
 
             return res;
@@ -125,25 +147,7 @@ namespace ElectricFieldCalculation.Core
         }
 
         public ObservableCollection<SiteData> All { get; } = new ObservableCollection<SiteData>();
-
-        //public SiteData SelectedData {
-        //    get { return _selectedData; }
-        //    set {
-        //        if (_selectedData != value) {
-
-        //            if (_selectedData != null)
-        //                _selectedData.PropertyChanged -= _selectedData_PropertyChanged;
-
-        //            _selectedData = value;
-
-        //            if (_selectedData != null)
-        //                _selectedData.PropertyChanged += _selectedData_PropertyChanged;
-
-        //            RaisePropertyChanged(nameof(SelectedData));
-        //        }
-        //    }
-        //}
-
+        
         public ObservableCollection<SiteData> SelectedSites { get; } = new ObservableCollection<SiteData>();
 
         private void _selectedData_PropertyChanged(object sender, System.ComponentModel.PropertyChangedEventArgs e)

@@ -47,6 +47,7 @@
   <ItemGroup>
     <Compile Include="DataRepository.cs" />
     <Compile Include="Data\ChannelInfo.cs" />
+    <Compile Include="Data\ComponentData.cs" />
     <Compile Include="Data\FieldComponent.cs" />
     <Compile Include="Data\PowerSpectra.cs" />
     <Compile Include="Data\SiteData.cs" />

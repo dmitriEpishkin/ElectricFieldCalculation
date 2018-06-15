@@ -60,7 +60,7 @@
                     <TextBlock Margin="3" Text="{Binding DataRepository.Name}" TextWrapping="Wrap" MinWidth="100"/>
                 </StackPanel>
 
-                <StackPanel Visibility="{Binding Gic, Converter={StaticResource NotNullToVisibilityConverter}}">
+                <StackPanel Visibility="{Binding Gic.Ts, Converter={StaticResource NotNullToVisibilityConverter}}">
                     <TextBlock FontWeight="Bold" Margin="3,3,3,0" Text="GIC:" TextWrapping="Wrap" MinWidth="100"/>
                     <TextBlock Margin="3" Text="{Binding GicFileName}" TextWrapping="Wrap" MinWidth="100"/>
                 </StackPanel>
@@ -79,21 +79,34 @@
                                     <ColumnDefinition Width="Auto"/>
                                 </Grid.ColumnDefinitions>
 
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                </Grid.RowDefinitions>
+
                                 <TextBlock Grid.Column="0" FontWeight="Bold">
                                     <Run Text="{Binding Name}" />
                                     <Run Text=":"/>
                                 </TextBlock>
 
-                                <TextBlock Grid.Column="1" Text="HX" Visibility="{Binding Hx, Converter={StaticResource NotNullToVisibilityConverter}}"/>
-                                <TextBlock Grid.Column="2" Text="HY" Visibility="{Binding Hy, Converter={StaticResource NotNullToVisibilityConverter}}"/>
-                                <TextBlock Grid.Column="3" Text="HZ" Visibility="{Binding Hz, Converter={StaticResource NotNullToVisibilityConverter}}"/>
+                                <TextBlock Grid.Column="1" Text="HX" Visibility="{Binding Hx.Ts, Converter={StaticResource NotNullToVisibilityConverter}}"/>
+                                <Rectangle Grid.Column="1" Grid.Row="1" Width="15" Height="3" Fill="Blue" Visibility="{Binding Hx.Spectra, Converter={StaticResource NotNullToVisibilityConverter}}" HorizontalAlignment="Left" ToolTip="Спектральная мощность посчитана"/>
 
+                                <TextBlock Grid.Column="2" Text="HY" Visibility="{Binding Hy.Ts, Converter={StaticResource NotNullToVisibilityConverter}}"/>
+                                <Rectangle Grid.Column="2" Grid.Row="1" Width="15" Height="3" Fill="Blue" Visibility="{Binding Hx.Spectra, Converter={StaticResource NotNullToVisibilityConverter}}" HorizontalAlignment="Left" ToolTip="Спектральная мощность посчитана"/>
 
-                                <TextBlock Grid.Column="4" Text="EX" Visibility="{Binding Ex, Converter={StaticResource NotNullToVisibilityConverter}}"/>
-                                <TextBlock Grid.Column="5" Text="EY" Visibility="{Binding Ey, Converter={StaticResource NotNullToVisibilityConverter}}"/>
+                                <TextBlock Grid.Column="3" Text="HZ" Visibility="{Binding Hz.Ts, Converter={StaticResource NotNullToVisibilityConverter}}"/>
+                                <Rectangle Grid.Column="3" Grid.Row="1" Width="15" Height="3" Fill="Blue" Visibility="{Binding Hy.Spectra, Converter={StaticResource NotNullToVisibilityConverter}}" HorizontalAlignment="Left" ToolTip="Спектральная мощность посчитана"/>
 
-                                <TextBlock Grid.Column="6" Text="GIC" Visibility="{Binding Gic, Converter={StaticResource NotNullToVisibilityConverter}}"/>
-                                
+                                <TextBlock Grid.Column="4" Text="EX" Visibility="{Binding Ex.Ts, Converter={StaticResource NotNullToVisibilityConverter}}"/>
+                                <Rectangle Grid.Column="4" Grid.Row="1" Width="15" Height="3" Fill="Blue" Visibility="{Binding Ex.Spectra, Converter={StaticResource NotNullToVisibilityConverter}}" HorizontalAlignment="Left" ToolTip="Спектральная мощность посчитана"/>
+
+                                <TextBlock Grid.Column="5" Text="EY" Visibility="{Binding Ey.Ts, Converter={StaticResource NotNullToVisibilityConverter}}"/>
+                                <Rectangle Grid.Column="5" Grid.Row="1" Width="15" Height="3" Fill="Blue" Visibility="{Binding Ey.Spectra, Converter={StaticResource NotNullToVisibilityConverter}}" HorizontalAlignment="Left" ToolTip="Спектральная мощность посчитана"/>
+
+                                <TextBlock Grid.Column="6" Text="GIC" Visibility="{Binding Gic.Ts, Converter={StaticResource NotNullToVisibilityConverter}}"/>
+                                <Rectangle Grid.Column="6" Grid.Row="1" Width="21" Height="3" Fill="Blue" Visibility="{Binding Gic.Spectra, Converter={StaticResource NotNullToVisibilityConverter}}" HorizontalAlignment="Left" ToolTip="Спектральная мощность посчитана"/>
+
                             </Grid>
                         </DataTemplate>
                     </ListView.ItemTemplate>
@@ -105,7 +118,7 @@
 
                     <Button Margin="3,6,3,3" Background="White" BorderThickness="0" Padding="3" Command="{Binding Status.RunCommand}">
                         <WrapPanel>
-                            <TextBlock Margin="0,0,6,0" Text="Запустить расчёт" VerticalAlignment="Center"/>
+                            <TextBlock Margin="0,0,6,0" Text="Расчёт теллурических токов" VerticalAlignment="Center"/>
                             <Image Source="Images/rocket.png" Width="24"/>
                         </WrapPanel>
                     </Button>
@@ -113,6 +126,18 @@
                     <ProgressBar Minimum="0" Maximum="100" Margin="3" Height="20" Value="{Binding Status.Progress}" Visibility="{Binding Status.IsCalculating, Converter={StaticResource BooleanToVisibilityConverter}}"/>
 
                     <TextBlock Foreground="DarkRed" Text="{Binding Status.Message}" Margin="3" TextWrapping="Wrap" MinWidth="100" HorizontalAlignment="Center"/>
+
+                    <Button Margin="3,6,3,3" Background="White" BorderThickness="0" Padding="3" Command="{Binding SpectraStatus.RunCommand}">
+                        <WrapPanel>
+                            <TextBlock Margin="0,0,6,0" Text="Расчёт спектральных мощностей" VerticalAlignment="Center"/>
+                            <Image Source="Images/rocket.png" Width="24"/>
+                        </WrapPanel>
+                    </Button>
+
+                    <ProgressBar Minimum="0" Maximum="100" Margin="3" Height="20" Value="{Binding SpectraStatus.Progress}" Visibility="{Binding SpectraStatus.IsCalculating, Converter={StaticResource BooleanToVisibilityConverter}}"/>
+
+                    <TextBlock Foreground="DarkRed" Text="{Binding SpectraStatus.Message}" Margin="3" TextWrapping="Wrap" MinWidth="100" HorizontalAlignment="Center"/>
+
 
                     <TextBlock Text="Настройки:" Margin="3,6,3,3" FontWeight="Bold"/>
 
@@ -135,6 +160,12 @@
                 <Button Margin="3,6,3,3" Background="White" BorderThickness="0" Padding="3" Command="{Binding SaveDataCommand}">
                     <WrapPanel>
                         <TextBlock Margin="0,0,6,0" Text="Сохранить данные" VerticalAlignment="Center"/>
+                        <Image Source="Images/save.png" Width="24"/>
+                    </WrapPanel>
+                </Button>
+                <Button Margin="3,6,3,3" Background="White" BorderThickness="0" Padding="3" Command="{Binding SaveSpectraCommand}">
+                    <WrapPanel>
+                        <TextBlock Margin="0,0,6,0" Text="Сохранить спектры" VerticalAlignment="Center"/>
                         <Image Source="Images/save.png" Width="24"/>
                     </WrapPanel>
                 </Button>
@@ -161,6 +192,7 @@
                 <TextBlock FontWeight="Bold" Text="Просмотр:" VerticalAlignment="Center" Margin="6,3,3,3"/>
                 <RadioButton Margin="3" x:Name="tsBtn" VerticalAlignment="Center" Content="Временные ряды" IsChecked="true"/>
                 <RadioButton Margin="3" x:Name="zBtn"  VerticalAlignment="Center" Content="Импеданс (Z)"/>
+                <RadioButton Margin="3" x:Name="spBtn" VerticalAlignment="Center" Content="Спектры"/>
 
                 <StackPanel Orientation="Horizontal" Margin="6,3,0,3" VerticalAlignment="Center" Visibility="{Binding ElementName= tsBtn, Path=IsChecked, Converter={StaticResource BooleanToVisibilityConverter}}">
                     <TextBlock FontWeight="Bold" Text="Показывать:" VerticalAlignment="Center"/>
@@ -173,7 +205,7 @@
                     <CheckBox x:Name="Dy" Margin="3" Content="dHy/dt" IsChecked="True" Click="Gic_OnClick"/>
                 </StackPanel>
 
-                <CheckBox Content="Всё на отдельные графики" Margin="6,3,3,3" IsChecked="{Binding SeparateCharts}" VerticalAlignment="Center"/>
+                <CheckBox Content="Всё на отдельные графики" Margin="6,3,3,3" IsChecked="{Binding SeparateCharts}" VerticalAlignment="Center" Visibility="{Binding ElementName= tsBtn, Path=IsChecked, Converter={StaticResource BooleanToVisibilityConverter}}"/>
 
             </WrapPanel>
 
@@ -240,7 +272,7 @@
                 </Grid>
             </ScrollViewer>
 
-            <Grid x:Name="ZChartsGrid" Grid.Row="1"  Visibility="{Binding ElementName=zBtn, Path=IsChecked, Converter={StaticResource BooleanToVisibilityConverter}}">
+            <Grid x:Name="ZChartsGrid" Grid.Row="1" Visibility="{Binding ElementName=zBtn, Path=IsChecked, Converter={StaticResource BooleanToVisibilityConverter}}">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition/>
                     <ColumnDefinition/>
@@ -287,6 +319,50 @@
                         <RotateTransform Angle="-90"/>
                     </TextBlock.LayoutTransform>
                 </TextBlock>
+
+            </Grid>
+
+            <Grid x:Name="SpChartsGrid" Grid.Row="1" Visibility="{Binding ElementName=spBtn, Path=IsChecked, Converter={StaticResource BooleanToVisibilityConverter}}">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+                <Grid x:Name="SpHxGrid" Grid.Row="0" Grid.Column="0" Margin="0,0,0,-10">
+                    <chart:ChartControl Margin="0,0,0,0" x:Name="SpHxChart"/>
+                    <StackPanel x:Name="SpHxLegend" Orientation="Horizontal" Margin="50,5" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                    <TextBlock Grid.Row="0" Text="Hx" HorizontalAlignment="Right" Margin="50,5" FontSize="16" FontWeight="Bold"/>
+                    <TextBlock Grid.Row="0" Text="Частота, герцы" FontSize="14" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="55,35"/>
+                </Grid>
+                <Grid x:Name="SpHyGrid" Grid.Row="0" Grid.Column="1" Margin="0,0,0,-10">
+                    <chart:ChartControl Margin="0,0,0,0" x:Name="SpHyChart"/>
+                    <StackPanel x:Name="SpHyLegend" Orientation="Horizontal" Margin="50,5" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                    <TextBlock Grid.Row="0" Text="Hy" HorizontalAlignment="Right" Margin="50,5" FontSize="16" FontWeight="Bold"/>
+                    <TextBlock Grid.Row="0" Text="Частота, герцы" FontSize="14" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="55,35"/>
+                </Grid>
+                <Grid x:Name="SpExGrid" Grid.Row="1" Grid.Column="0" Margin="0,0,0,-10">
+                    <chart:ChartControl Margin="0,0,0,0" x:Name="SpExChart"/>
+                    <StackPanel x:Name="SpExLegend" Orientation="Horizontal" Margin="50,5" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                    <TextBlock Grid.Row="0" Text="Ex" HorizontalAlignment="Right" Margin="50,5" FontSize="16" FontWeight="Bold"/>
+                    <TextBlock Grid.Row="0" Text="Частота, герцы" FontSize="14" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="55,35"/>
+                </Grid>
+                <Grid x:Name="SpEyGrid" Grid.Row="1" Grid.Column="1" Margin="0,0,0,-10">
+                    <chart:ChartControl Margin="0,0,0,0" x:Name="SpEyChart"/>
+                    <StackPanel x:Name="SpEyLegend" Orientation="Horizontal" Margin="50,5" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                    <TextBlock Grid.Row="0" Text="Ey" HorizontalAlignment="Right" Margin="50,5" FontSize="16" FontWeight="Bold"/>
+                    <TextBlock Grid.Row="0" Text="Частота, герцы" FontSize="14" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="55,35"/>
+                </Grid>
+                <Grid x:Name="SpGicGrid" Grid.Row="2" Grid.Column="0" Margin="0,0,0,-10">
+                    <chart:ChartControl Margin="0,0,0,0" x:Name="SpGicChart"/>
+                    <StackPanel x:Name="SpGicLegend" Orientation="Horizontal" Margin="50,5" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                    <TextBlock Grid.Row="0" Text="GIC" HorizontalAlignment="Right" Margin="50,5" FontSize="16" FontWeight="Bold"/>
+                    <TextBlock Grid.Row="0" Text="Частота, герцы" FontSize="14" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="55,35"/>
+                </Grid>
 
             </Grid>
 

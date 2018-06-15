@@ -19,3 +19,13 @@ D:\VisualStudio\Projects\ElectricFieldCalculation\ElectricFieldCalculation.Core\
 D:\VisualStudio\Projects\ElectricFieldCalculation\ElectricFieldCalculation.Core\obj\Debug\ElectricFieldCalculation.Core.csprojResolveAssemblyReference.cache
 D:\VisualStudio\Projects\ElectricFieldCalculation\ElectricFieldCalculation.Core\obj\Debug\ElectricFieldCalculation.Core.csproj.CoreCompileInputs.cache
 D:\VisualStudio\Projects\ElectricFieldCalculation\ElectricFieldCalculation.Core\obj\Debug\ElectricFieldCalculation.Core.csproj.CopyComplete
+C:\Users\Епишкин Дмитрий\GitProjects\Electric\ElectricFieldCalculation\ElectricFieldCalculation\ElectricFieldCalculation.Core\bin\Debug\ElectricFieldCalculation.Core.dll
+C:\Users\Епишкин Дмитрий\GitProjects\Electric\ElectricFieldCalculation\ElectricFieldCalculation\ElectricFieldCalculation.Core\bin\Debug\ElectricFieldCalculation.Core.pdb
+C:\Users\Епишкин Дмитрий\GitProjects\Electric\ElectricFieldCalculation\ElectricFieldCalculation\ElectricFieldCalculation.Core\bin\Debug\WpfApplicationFramework.dll
+C:\Users\Епишкин Дмитрий\GitProjects\Electric\ElectricFieldCalculation\ElectricFieldCalculation\ElectricFieldCalculation.Core\bin\Debug\WpfApplicationFramework.pdb
+C:\Users\Епишкин Дмитрий\GitProjects\Electric\ElectricFieldCalculation\ElectricFieldCalculation\ElectricFieldCalculation.Core\bin\Debug\WpfApplicationFramework.xml
+C:\Users\Епишкин Дмитрий\GitProjects\Electric\ElectricFieldCalculation\ElectricFieldCalculation\ElectricFieldCalculation.Core\obj\Debug\ElectricFieldCalculation.Core.csprojResolveAssemblyReference.cache
+C:\Users\Епишкин Дмитрий\GitProjects\Electric\ElectricFieldCalculation\ElectricFieldCalculation\ElectricFieldCalculation.Core\obj\Debug\ElectricFieldCalculation.Core.csproj.CoreCompileInputs.cache
+C:\Users\Епишкин Дмитрий\GitProjects\Electric\ElectricFieldCalculation\ElectricFieldCalculation\ElectricFieldCalculation.Core\obj\Debug\ElectricFieldCalculation.Core.csproj.CopyComplete
+C:\Users\Епишкин Дмитрий\GitProjects\Electric\ElectricFieldCalculation\ElectricFieldCalculation\ElectricFieldCalculation.Core\obj\Debug\ElectricFieldCalculation.Core.dll
+C:\Users\Епишкин Дмитрий\GitProjects\Electric\ElectricFieldCalculation\ElectricFieldCalculation\ElectricFieldCalculation.Core\obj\Debug\ElectricFieldCalculation.Core.pdb

@@ -49,19 +49,25 @@ namespace SynteticData {
                     {new ChannelInfo("DATA", FieldComponent.Hx), baseTs[0]},
                     {new ChannelInfo("DATA", FieldComponent.Hy), baseTs[1]}
                 });
-            
-            return new SiteData { Ex = res[0], Ey = res[1], Hx = baseTs[0], Hy = baseTs[1] };
+
+            var data = new SiteData();
+            data.Ex.Ts = res[0];
+            data.Ey.Ts = res[1];
+            data.Hx.Ts = baseTs[0];
+            data.Hy.Ts = baseTs[1];
+
+            return data;
         }
 
         public TimeSeriesDouble[] Generate(SiteData data, int window, int step, bool acFilter, Action<double> progress) {
 
             progress(0);
 
-            var sampleRate = data.Hx.SampleRate;
+            var sampleRate = data.Hx.Ts.SampleRate;
             var tensorCurve = data.Z;
-            var baseTs = new[] {data.Hx, data.Hy};
+            var baseTs = new[] {data.Hx.Ts, data.Hy.Ts};
 
-            while (window > data.Hx.Data.Count / 2)
+            while (window > data.Hx.Ts.Data.Count / 2)
                 window /= 2;
 
             tensorCurve.Initalize(window, sampleRate);

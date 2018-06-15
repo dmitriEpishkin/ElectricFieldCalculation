@@ -1,0 +1,15 @@
+C:\Users\Епишкин Дмитрий\GitProjects\Electric\ElectricFieldCalculation\ElectricFieldCalculation\MaryPro.ControlSource\bin\Debug\MaryPro.ControlSource.exe.config
+C:\Users\Епишкин Дмитрий\GitProjects\Electric\ElectricFieldCalculation\ElectricFieldCalculation\MaryPro.ControlSource\bin\Debug\MaryPro.ControlSource.exe
+C:\Users\Епишкин Дмитрий\GitProjects\Electric\ElectricFieldCalculation\ElectricFieldCalculation\MaryPro.ControlSource\bin\Debug\MaryPro.ControlSource.pdb
+C:\Users\Епишкин Дмитрий\GitProjects\Electric\ElectricFieldCalculation\ElectricFieldCalculation\MaryPro.ControlSource\obj\Debug\MaryPro.ControlSource.csprojResolveAssemblyReference.cache
+C:\Users\Епишкин Дмитрий\GitProjects\Electric\ElectricFieldCalculation\ElectricFieldCalculation\MaryPro.ControlSource\obj\Debug\MainWindow.g.cs
+C:\Users\Епишкин Дмитрий\GitProjects\Electric\ElectricFieldCalculation\ElectricFieldCalculation\MaryPro.ControlSource\obj\Debug\App.g.cs
+C:\Users\Епишкин Дмитрий\GitProjects\Electric\ElectricFieldCalculation\ElectricFieldCalculation\MaryPro.ControlSource\obj\Debug\MaryPro.ControlSource_MarkupCompile.cache
+C:\Users\Епишкин Дмитрий\GitProjects\Electric\ElectricFieldCalculation\ElectricFieldCalculation\MaryPro.ControlSource\obj\Debug\MaryPro.ControlSource_MarkupCompile.lref
+C:\Users\Епишкин Дмитрий\GitProjects\Electric\ElectricFieldCalculation\ElectricFieldCalculation\MaryPro.ControlSource\obj\Debug\MainWindow.baml
+C:\Users\Епишкин Дмитрий\GitProjects\Electric\ElectricFieldCalculation\ElectricFieldCalculation\MaryPro.ControlSource\obj\Debug\MaryPro.ControlSource.g.resources
+C:\Users\Епишкин Дмитрий\GitProjects\Electric\ElectricFieldCalculation\ElectricFieldCalculation\MaryPro.ControlSource\obj\Debug\MaryPro.ControlSource.Properties.Resources.resources
+C:\Users\Епишкин Дмитрий\GitProjects\Electric\ElectricFieldCalculation\ElectricFieldCalculation\MaryPro.ControlSource\obj\Debug\MaryPro.ControlSource.csproj.GenerateResource.cache
+C:\Users\Епишкин Дмитрий\GitProjects\Electric\ElectricFieldCalculation\ElectricFieldCalculation\MaryPro.ControlSource\obj\Debug\MaryPro.ControlSource.csproj.CoreCompileInputs.cache
+C:\Users\Епишкин Дмитрий\GitProjects\Electric\ElectricFieldCalculation\ElectricFieldCalculation\MaryPro.ControlSource\obj\Debug\MaryPro.ControlSource.exe
+C:\Users\Епишкин Дмитрий\GitProjects\Electric\ElectricFieldCalculation\ElectricFieldCalculation\MaryPro.ControlSource\obj\Debug\MaryPro.ControlSource.pdb

@@ -61,3 +61,35 @@ D:\VisualStudio\Projects\ElectricFieldCalculation\Nordwest.Wpf.Controls\obj\Debu
 D:\VisualStudio\Projects\ElectricFieldCalculation\Nordwest.Wpf.Controls\obj\Debug\Nordwest.Wpf.Controls.Properties.Resources.resources
 D:\VisualStudio\Projects\ElectricFieldCalculation\Nordwest.Wpf.Controls\obj\Debug\Nordwest.Wpf.Controls.csproj.GenerateResource.cache
 D:\VisualStudio\Projects\ElectricFieldCalculation\Nordwest.Wpf.Controls\obj\Debug\Nordwest.Wpf.Controls.csproj.CoreCompileInputs.cache
+C:\Users\Епишкин Дмитрий\GitProjects\Electric\ElectricFieldCalculation\ElectricFieldCalculation\Nordwest.Wpf.Controls\bin\Debug\Nordwest.Wpf.Controls.dll
+C:\Users\Епишкин Дмитрий\GitProjects\Electric\ElectricFieldCalculation\ElectricFieldCalculation\Nordwest.Wpf.Controls\bin\Debug\Nordwest.Wpf.Controls.pdb
+C:\Users\Епишкин Дмитрий\GitProjects\Electric\ElectricFieldCalculation\ElectricFieldCalculation\Nordwest.Wpf.Controls\obj\Debug\Nordwest.Wpf.Controls.csprojResolveAssemblyReference.cache
+C:\Users\Епишкин Дмитрий\GitProjects\Electric\ElectricFieldCalculation\ElectricFieldCalculation\Nordwest.Wpf.Controls\obj\Debug\Chart\ChartCanvas.baml
+C:\Users\Епишкин Дмитрий\GitProjects\Electric\ElectricFieldCalculation\ElectricFieldCalculation\Nordwest.Wpf.Controls\obj\Debug\Marks.baml
+C:\Users\Епишкин Дмитрий\GitProjects\Electric\ElectricFieldCalculation\ElectricFieldCalculation\Nordwest.Wpf.Controls\obj\Debug\SliderResources.baml
+C:\Users\Епишкин Дмитрий\GitProjects\Electric\ElectricFieldCalculation\ElectricFieldCalculation\Nordwest.Wpf.Controls\obj\Debug\Themes\Common.baml
+C:\Users\Епишкин Дмитрий\GitProjects\Electric\ElectricFieldCalculation\ElectricFieldCalculation\Nordwest.Wpf.Controls\obj\Debug\Themes\generic.baml
+C:\Users\Епишкин Дмитрий\GitProjects\Electric\ElectricFieldCalculation\ElectricFieldCalculation\Nordwest.Wpf.Controls\obj\Debug\Chart\ChartCanvas.g.cs
+C:\Users\Епишкин Дмитрий\GitProjects\Electric\ElectricFieldCalculation\ElectricFieldCalculation\Nordwest.Wpf.Controls\obj\Debug\Chart\ChartControl.g.cs
+C:\Users\Епишкин Дмитрий\GitProjects\Electric\ElectricFieldCalculation\ElectricFieldCalculation\Nordwest.Wpf.Controls\obj\Debug\DateRangeSlider.g.cs
+C:\Users\Епишкин Дмитрий\GitProjects\Electric\ElectricFieldCalculation\ElectricFieldCalculation\Nordwest.Wpf.Controls\obj\Debug\Marks.g.cs
+C:\Users\Епишкин Дмитрий\GitProjects\Electric\ElectricFieldCalculation\ElectricFieldCalculation\Nordwest.Wpf.Controls\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\Епишкин Дмитрий\GitProjects\Electric\ElectricFieldCalculation\ElectricFieldCalculation\Nordwest.Wpf.Controls\obj\Debug\Nordwest.Wpf.Controls_MarkupCompile.cache
+C:\Users\Епишкин Дмитрий\GitProjects\Electric\ElectricFieldCalculation\ElectricFieldCalculation\Nordwest.Wpf.Controls\obj\Debug\Nordwest.Wpf.Controls_MarkupCompile.lref
+C:\Users\Епишкин Дмитрий\GitProjects\Electric\ElectricFieldCalculation\ElectricFieldCalculation\Nordwest.Wpf.Controls\obj\Debug\Chart\ChartControl.baml
+C:\Users\Епишкин Дмитрий\GitProjects\Electric\ElectricFieldCalculation\ElectricFieldCalculation\Nordwest.Wpf.Controls\obj\Debug\DateRangeSlider.baml
+C:\Users\Епишкин Дмитрий\GitProjects\Electric\ElectricFieldCalculation\ElectricFieldCalculation\Nordwest.Wpf.Controls\obj\Debug\Themes\Chart.baml
+C:\Users\Епишкин Дмитрий\GitProjects\Electric\ElectricFieldCalculation\ElectricFieldCalculation\Nordwest.Wpf.Controls\obj\Debug\Themes\ExpandersPanel.baml
+C:\Users\Епишкин Дмитрий\GitProjects\Electric\ElectricFieldCalculation\ElectricFieldCalculation\Nordwest.Wpf.Controls\obj\Debug\Themes\Material.baml
+C:\Users\Епишкин Дмитрий\GitProjects\Electric\ElectricFieldCalculation\ElectricFieldCalculation\Nordwest.Wpf.Controls\obj\Debug\Themes\MaterialExpander.baml
+C:\Users\Епишкин Дмитрий\GitProjects\Electric\ElectricFieldCalculation\ElectricFieldCalculation\Nordwest.Wpf.Controls\obj\Debug\Themes\MaterialFlatIconToggleButton.baml
+C:\Users\Епишкин Дмитрий\GitProjects\Electric\ElectricFieldCalculation\ElectricFieldCalculation\Nordwest.Wpf.Controls\obj\Debug\Themes\MaterialTabControl.baml
+C:\Users\Епишкин Дмитрий\GitProjects\Electric\ElectricFieldCalculation\ElectricFieldCalculation\Nordwest.Wpf.Controls\obj\Debug\Themes\MaterialOverlayControl.baml
+C:\Users\Епишкин Дмитрий\GitProjects\Electric\ElectricFieldCalculation\ElectricFieldCalculation\Nordwest.Wpf.Controls\obj\Debug\Themes\PopupButton.baml
+C:\Users\Епишкин Дмитрий\GitProjects\Electric\ElectricFieldCalculation\ElectricFieldCalculation\Nordwest.Wpf.Controls\obj\Debug\Themes\UpDownControl.baml
+C:\Users\Епишкин Дмитрий\GitProjects\Electric\ElectricFieldCalculation\ElectricFieldCalculation\Nordwest.Wpf.Controls\obj\Debug\Nordwest.Wpf.Controls.g.resources
+C:\Users\Епишкин Дмитрий\GitProjects\Electric\ElectricFieldCalculation\ElectricFieldCalculation\Nordwest.Wpf.Controls\obj\Debug\Nordwest.Wpf.Controls.Properties.Resources.resources
+C:\Users\Епишкин Дмитрий\GitProjects\Electric\ElectricFieldCalculation\ElectricFieldCalculation\Nordwest.Wpf.Controls\obj\Debug\Nordwest.Wpf.Controls.csproj.GenerateResource.cache
+C:\Users\Епишкин Дмитрий\GitProjects\Electric\ElectricFieldCalculation\ElectricFieldCalculation\Nordwest.Wpf.Controls\obj\Debug\Nordwest.Wpf.Controls.csproj.CoreCompileInputs.cache
+C:\Users\Епишкин Дмитрий\GitProjects\Electric\ElectricFieldCalculation\ElectricFieldCalculation\Nordwest.Wpf.Controls\obj\Debug\Nordwest.Wpf.Controls.dll
+C:\Users\Епишкин Дмитрий\GitProjects\Electric\ElectricFieldCalculation\ElectricFieldCalculation\Nordwest.Wpf.Controls\obj\Debug\Nordwest.Wpf.Controls.pdb

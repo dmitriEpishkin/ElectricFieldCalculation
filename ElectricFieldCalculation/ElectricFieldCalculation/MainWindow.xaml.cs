@@ -9,6 +9,7 @@ using System.Windows.Controls;
 using System.Windows.Media;
 using SynteticData.Data;
 using System.Collections.Generic;
+using ElectricFieldCalculation.Core.Data;
 
 namespace ElectricFieldCalculation {
     /// <summary>
@@ -18,6 +19,7 @@ namespace ElectricFieldCalculation {
 
         private ViewportAxis _timeAxis = new LinAxis();
         private ViewportAxis _fAxis = new Log10Axis();
+        private ViewportAxis _fSpAxis = new Log10Axis();
 
         private ViewModel _model;
 
@@ -25,6 +27,7 @@ namespace ElectricFieldCalculation {
         
         private ChartControl[] _tsCharts;
         private ChartControl[] _zCharts;
+        private ChartControl[] _spCharts;
         private ChartControl[] _phCharts;
 
         private List<ChartControl> _separateTsCharts = new List<ChartControl>();
@@ -35,6 +38,7 @@ namespace ElectricFieldCalculation {
             _tsCharts = new[] { GicChart, ExChart, EyChart, HxChart, HyChart, dHxChart, dHyChart };
             _zCharts = new[] { MainImpedanceChart, AddImpedanceChart };
             _phCharts = new[] { MainPhaseChart, AddPhaseChart };
+            _spCharts = new[] { SpHxChart, SpHyChart, SpExChart, SpEyChart, SpGicChart };
 
             Initalize();
 
@@ -63,8 +67,29 @@ namespace ElectricFieldCalculation {
         }
 
         private void DataRepository_PropertyChanged(object sender, PropertyChangedEventArgs e) {
-
             ClearCharts();
+            CreateTsCharts();
+            CreateSpectraCharts();
+        }
+
+        private void CreateSpectraCharts() {
+
+            SpGicLegend.Children.Clear();
+            SpExLegend.Children.Clear();
+            SpEyLegend.Children.Clear();
+            SpHxLegend.Children.Clear();
+            SpHyLegend.Children.Clear();
+            
+            foreach (var data in _model.DataRepository.SelectedSites) {
+                AddToChart(data.Name, SpGicLegend, SpGicChart, data.Gic.Spectra, GetNextColor(SpGicChart, _mainColors));
+                AddToChart(data.Name, SpExLegend, SpExChart, data.Ex.Spectra, GetNextColor(SpExChart, _mainColors));
+                AddToChart(data.Name, SpEyLegend, SpEyChart, data.Ey.Spectra, GetNextColor(SpEyChart, _mainColors));
+                AddToChart(data.Name, SpHxLegend, SpHxChart, data.Hx.Spectra, GetNextColor(SpHxChart, _mainColors));
+                AddToChart(data.Name, SpHyLegend, SpHyChart, data.Hy.Spectra, GetNextColor(SpHyChart, _mainColors));
+            }
+        }
+
+        private void CreateTsCharts() {
 
             if (_model.SeparateCharts) {
                 TsChartsGrid.Children.Clear();
@@ -75,27 +100,29 @@ namespace ElectricFieldCalculation {
                     if (check(c) && data != null) {
                         var chart = new ChartControl();
                         var g = CreateChartGrid(header, legend, chart);
+                        Grid.SetRow(g, row);
                         AddToChart("", new StackPanel(), chart, data, Colors.Black);
                         TsChartsGrid.Children.Add(g);
-                    } 
+                    }
                 };
-
+                var count = 0;
                 foreach (var d in _model.DataRepository.SelectedSites) {
-                    add(Gic, "I (GIC), А", d.Name, d.Gic, 0);
-                    add(Ex, "Ex, мВ/км", d.Name, d.Ex, 1);
-                    add(Ey, "Ey, мВ/км", d.Name, d.Ey, 2);
-                    add(Hx, "Hx, нТл", d.Name, d.Hx, 3);
-                    add(Hy, "Hy, нТл", d.Name, d.Hy, 4);
-                    add(Dx, "dHx/dt", d.Name, d.Dhx, 5);
-                    add(Dy, "dHy/dt", d.Name, d.Dhy, 6);                   
+                    add(Gic, "I (GIC), А", d.Name, d.Gic.Ts, count + 0);
+                    add(Ex, "Ex, мВ/км", d.Name, d.Ex.Ts, count + 1);
+                    add(Ey, "Ey, мВ/км", d.Name, d.Ey.Ts, count + 2);
+                    add(Hx, "Hx, нТл", d.Name, d.Hx.Ts, count + 3);
+                    add(Hy, "Hy, нТл", d.Name, d.Hy.Ts, count + 4);
+                    add(Dx, "dHx/dt", d.Name, d.Dhx.Ts, count + 5);
+                    add(Dy, "dHy/dt", d.Name, d.Dhy.Ts, count + 6);
+                    count += 7;
                 }
-
+                SetRowDefinitions(TsChartsGrid, count);
             }
 
             else {
 
                 TsChartsGrid.Children.Clear();
-                
+
                 TsChartsGrid.Children.Add(GicGrid);
                 TsChartsGrid.Children.Add(ExGrid);
                 TsChartsGrid.Children.Add(EyGrid);
@@ -103,6 +130,8 @@ namespace ElectricFieldCalculation {
                 TsChartsGrid.Children.Add(HyGrid);
                 TsChartsGrid.Children.Add(dHxGrid);
                 TsChartsGrid.Children.Add(dHyGrid);
+
+                SetRowDefinitions(TsChartsGrid, 7);
 
                 GicLegend.Children.Clear();
                 ExLegend.Children.Clear();
@@ -113,13 +142,13 @@ namespace ElectricFieldCalculation {
                 dHyLegend.Children.Clear();
 
                 foreach (var data in _model.DataRepository.SelectedSites) {
-                    AddToChart(data.Name, GicLegend, GicChart, data.Gic, GetNextColor(GicChart, _mainColors));
-                    AddToChart(data.Name, ExLegend, ExChart, data.Ex, GetNextColor(ExChart, _mainColors));
-                    AddToChart(data.Name, EyLegend, EyChart, data.Ey, GetNextColor(EyChart, _mainColors));
-                    AddToChart(data.Name, HxLegend, HxChart, data.Hx, GetNextColor(HxChart, _mainColors));
-                    AddToChart(data.Name, HyLegend, HyChart, data.Hy, GetNextColor(HyChart, _mainColors));
-                    AddToChart(data.Name, dHxLegend, dHxChart, data.Dhx, GetNextColor(dHxChart, _mainColors));
-                    AddToChart(data.Name, dHyLegend, dHyChart, data.Dhy, GetNextColor(dHyChart, _mainColors));
+                    AddToChart(data.Name, GicLegend, GicChart, data.Gic.Ts, GetNextColor(GicChart, _mainColors));
+                    AddToChart(data.Name, ExLegend, ExChart, data.Ex.Ts, GetNextColor(ExChart, _mainColors));
+                    AddToChart(data.Name, EyLegend, EyChart, data.Ey.Ts, GetNextColor(EyChart, _mainColors));
+                    AddToChart(data.Name, HxLegend, HxChart, data.Hx.Ts, GetNextColor(HxChart, _mainColors));
+                    AddToChart(data.Name, HyLegend, HyChart, data.Hy.Ts, GetNextColor(HyChart, _mainColors));
+                    AddToChart(data.Name, dHxLegend, dHxChart, data.Dhx.Ts, GetNextColor(dHxChart, _mainColors));
+                    AddToChart(data.Name, dHyLegend, dHyChart, data.Dhy.Ts, GetNextColor(dHyChart, _mainColors));
                 }
                 Array.ForEach(_tsCharts, t => ((Grid)t.Parent).Visibility = t.ChartElements.Count > 0 ? Visibility.Visible : Visibility.Collapsed);
 
@@ -141,12 +170,17 @@ namespace ElectricFieldCalculation {
 
         }
 
+        private void SetRowDefinitions(Grid grid, int rowCount) {
+            grid.RowDefinitions.Clear();
+            for(var i = 0; i < rowCount; i++)
+                grid.RowDefinitions.Add(new RowDefinition {Height = GridLength.Auto});
+        }
+
         private void Initalize() {
-
             Array.ForEach(_tsCharts, InitalizeTsChart);
-            Array.ForEach(_zCharts, InitalizeSpChart);
+            Array.ForEach(_zCharts, c => InitalizeSpChart(c, _fAxis));
             Array.ForEach(_phCharts, InitalizePhaseChart);
-
+            Array.ForEach(_spCharts, c => InitalizeSpChart(c, _fSpAxis));
         }
 
         private void InitalizeTsChart(ChartControl chart) {
@@ -163,9 +197,9 @@ namespace ElectricFieldCalculation {
             
         }
 
-        private void InitalizeSpChart(ChartControl chart) {
+        private void InitalizeSpChart(ChartControl chart, ViewportAxis xAxis) {
             chart.VerticalAxis = new Log10Axis { IsReversed = true };
-            chart.HorizontalAxis = _fAxis;
+            chart.HorizontalAxis = xAxis;
             chart.LeftAxis.MarkProvider = new Log10MarkProvider();
             chart.BottomAxis.MarkProvider = new Log10MarkProvider();
             chart.Canvas.LeftMarkProvider = chart.LeftAxis.MarkProvider;
@@ -197,6 +231,7 @@ namespace ElectricFieldCalculation {
 
         private void ClearCharts() {
             Array.ForEach(_tsCharts, c => { c.ChartElements.Clear(); c.Canvas.Refresh(); RefreshBorders(c); });
+            Array.ForEach(_spCharts, c => { c.ChartElements.Clear(); c.Canvas.Refresh(); RefreshBorders(c); });
             _separateTsCharts.Clear();
         }
 
@@ -285,7 +320,31 @@ namespace ElectricFieldCalculation {
             chart.Canvas.Refresh();
             RefreshBorders(chart);
         }
-        
+
+        private void AddToChart(string name, StackPanel legend, ChartControl chart, PowerSpectra sp, Color color) {
+
+            if (sp != null) {
+                var e = new LineChartElement { Color = color };
+                for (int i = 0; i < sp.Mag2.Length; i++) {
+                    e.Points.Add(new Point(sp.F[i], sp.Mag2[i]));
+                }
+                chart.ChartElements.Add(e);
+
+                var t = new TextBlock {
+                    Text = name,
+                    FontWeight = FontWeights.Bold,
+                    FontSize = 16,
+                    Margin = new Thickness(0, 0, 6, 0),
+                    Foreground = new SolidColorBrush(color)
+                };
+
+                legend.Children.Add(t);
+            }
+
+            chart.Canvas.Refresh();
+            RefreshBorders(chart);
+        }
+
         private void RefreshBorders(ChartControl chart) {
             var s = chart.GetBounds();
             chart.ViewportModelRect = s;
